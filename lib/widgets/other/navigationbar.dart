@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project1/pages/eventpage.dart';
-import 'package:project1/pages/homepage.dart';
-import 'package:project1/pages/taskpage.dart';
+import 'package:project1/pages/EVENT/eventpage.dart';
+import 'package:project1/pages/Home/homepage.dart';
+import 'package:project1/pages/TASKS/taskpage.dart';
 
 class naviBar extends StatefulWidget {
   const naviBar({super.key});

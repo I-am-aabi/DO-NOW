@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:project1/pages/homepage.dart';
-import 'package:project1/widgets/navigationbar.dart';
+import 'package:project1/pages/Home/homepage.dart';
+import 'package:project1/widgets/other/navigationbar.dart';
 
 // ignore: camel_case_types
 class Splash_Screen extends StatefulWidget {

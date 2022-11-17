@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
-import 'package:project1/functions/image_picker.dart';
+import 'package:project1/functions/others/image_picker.dart';
 
 class EventImage extends StatefulWidget {
   const EventImage({super.key});

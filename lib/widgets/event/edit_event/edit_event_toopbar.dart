@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_edit-task.dart';
-import 'package:project1/functions/ontap/ontap_edit_event.dart';
 
-class ViewEventTopbar extends StatelessWidget {
-  const ViewEventTopbar({super.key});
+class EditEventTopbar extends StatelessWidget {
+  const EditEventTopbar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +11,14 @@ class ViewEventTopbar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            tapEditEvent(context);
+            Navigator.pop(context);
           },
-          icon: const Icon(Icons.edit),
+          icon: const Icon(Icons.cancel),
           iconSize: 32,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),
         const Text(
-          'VIEW EVENT',
+          'EDIT EVENT',
           style: TextStyle(
             fontSize: 32,
             color: Color.fromARGB(255, 54, 191, 121),
@@ -28,7 +26,7 @@ class ViewEventTopbar extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.delete),
+          icon: const Icon(Icons.done_outline),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),

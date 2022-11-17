@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/functions/ontap/ontap_search.dart';
 
 class TopBar extends StatelessWidget {
   const TopBar({super.key});
@@ -8,11 +9,10 @@ class TopBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
-    
       children: [
-         IconButton(
+        IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.add_circle_outline),
+          icon: const Icon(Icons.person),
           iconSize: 32,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),
@@ -23,13 +23,14 @@ class TopBar extends StatelessWidget {
             color: Color.fromARGB(255, 54, 191, 121),
           ),
         ),
-          IconButton(
-          onPressed: () {},
+        IconButton(
+          onPressed: () {
+            tapSearch(context);
+          },
           icon: const Icon(Icons.search),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),
-       
       ],
     );
   }

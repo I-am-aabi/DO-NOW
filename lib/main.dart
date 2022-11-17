@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project1/pages/splashscreen.dart';
+import 'package:project1/pages/Home/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
