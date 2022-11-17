@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/functions/ontap/ontap_view_event.dart';
 
 class Event extends StatelessWidget {
   const Event({super.key});
@@ -11,37 +12,39 @@ class Event extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
-            Text('Christmas',
-            style: TextStyle(
-              color: Color.fromARGB(255, 54, 191, 121),
-              fontSize: 20
-            ),),
-            Text('Party hall',
-            style: TextStyle(
-              color: Color.fromARGB(255, 54, 191, 121),
-              fontSize: 20
-            ),)
+            Text(
+              'Christmas',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            ),
+            Text(
+              'Party hall',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            )
           ],
-          
         ),
         Image.asset('assets/images/festival.jpg'),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:  [
-            const Text('25-12-2022',
-            style: TextStyle(
-              color: Color.fromARGB(255, 54, 191, 121),
-              fontSize: 20
-            ),),
-            IconButton(onPressed: () {
-              
-            }, icon: const Icon(Icons.visibility),
-            color: const Color.fromARGB(255, 54, 191, 121),),
-            const Text('8:00 PM',
-            style: TextStyle(
-              color: Color.fromARGB(255, 54, 191, 121),
-              fontSize: 20
-            ),)
+          children: [
+            const Text(
+              '25-12-2022',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            ),
+            IconButton(
+              onPressed: () {
+                tapViewEvent(context);
+              },
+              icon: const Icon(Icons.visibility),
+              color: const Color.fromARGB(255, 54, 191, 121),
+            ),
+            const Text(
+              '8:00 PM',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            )
           ],
         )
       ],

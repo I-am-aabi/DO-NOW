@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
-import 'package:project1/widgets/task/add_task/taskfields/categories_task.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/edit_task_categories.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/status_categories.dart';
 
