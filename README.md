@@ -1,6 +1,8 @@
 # project1
 
 A new Flutter project.
+ 
+Do Now is my first flutter project that allows you to manage your tasks and events, it can notify you when the evnt or task time comes
 
 ## Getting Started
 
