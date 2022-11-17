@@ -14,7 +14,25 @@ class NextTask extends StatelessWidget {
        ),
         width: double.infinity,
         height: 410,
-       
+       child: ListView(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text('TODAY',
+              style: TextStyle(
+                color: const Color.fromARGB(255, 54, 191, 121),
+                fontSize: 20
+              ),)
+            ],
+          ),
+          // ignore: prefer_const_constructors
+          SizedBox(
+            height: 10,
+          ),
+
+        ],
+       ),
       ),
     );
   }

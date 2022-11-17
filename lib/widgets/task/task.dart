@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_viewtask.dart';
+import 'package:project1/functions/navigations/ontap_viewtask.dart';
 
 class Task extends StatelessWidget {
   const Task({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_addevent.dart';
+import 'package:project1/functions/navigations/ontap_addevent.dart';
+import 'package:project1/functions/navigations/ontap_filter_event.dart';
 
 class EventTopBar extends StatelessWidget {
   const EventTopBar({super.key});
@@ -26,7 +27,9 @@ class EventTopBar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            tapEventFilter(context);
+          },
           icon: const Icon(Icons.filter_alt),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),

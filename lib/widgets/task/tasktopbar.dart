@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_addtasks.dart';
+import 'package:project1/functions/navigations/ontap_addtasks.dart';
+import 'package:project1/functions/navigations/ontap_filter.dart';
 
 class TaskTopBar extends StatelessWidget {
   const TaskTopBar({super.key});
@@ -26,7 +27,9 @@ class TaskTopBar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            tapFilter(context);
+          },
           icon: const Icon(Icons.filter_alt),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),

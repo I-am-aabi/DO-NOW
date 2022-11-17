@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_view_event.dart';
+import 'package:project1/functions/navigations/ontap_view_event.dart';
 
 class Event extends StatelessWidget {
   const Event({super.key});

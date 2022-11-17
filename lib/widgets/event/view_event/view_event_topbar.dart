@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap/ontap_edit-task.dart';
-import 'package:project1/functions/ontap/ontap_edit_event.dart';
+import 'package:project1/functions/navigations/ontap_edit-task.dart';
+import 'package:project1/functions/navigations/ontap_edit_event.dart';
 
 class ViewEventTopbar extends StatelessWidget {
   const ViewEventTopbar({super.key});

@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dropdown_formfield: ^0.1.4
   image_picker: ^0.8.6
+  custom_radio_grouped_button: ^2.1.2+2
 
 dev_dependencies:
   flutter_test:
