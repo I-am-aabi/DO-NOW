@@ -26,7 +26,7 @@ class Task extends StatelessWidget {
               IconButton(
                 onPressed: (() {}),
                 icon: const Icon(Icons.visibility),
-                color: Color.fromARGB(255, 78, 190, 86),
+                color: const Color.fromARGB(255, 78, 190, 86),
               ),
               const Text(
                 '10:30 AM',
