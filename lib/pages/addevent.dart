@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/widgets/event/add_event_topbar.dart';
-import 'package:project1/widgets/event/event_field/event_field.dart';
+import 'package:project1/widgets/event/add_event/add_event_topbar.dart';
+import 'package:project1/widgets/event/add_event/event_field/event_field.dart';
 
 
 class AddEvent extends StatefulWidget {

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:project1/widgets/task/task_view/task_field_info.dart';
 
 class ViewTaskInfo extends StatelessWidget {
@@ -21,42 +19,42 @@ class ViewTaskInfo extends StatelessWidget {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               const FieldInfo(
-                heading: 'Description:',
+                heading: 'Description',
                 tailing: 'Change car oil',
               ),
               const SizedBox(
                 height: 10,
               ),
               const FieldInfo(
-                heading: 'Date:',
+                heading: 'Date',
                 tailing: '31-11-2022',
               ),
               const SizedBox(
                 height: 10,
               ),
               const FieldInfo(
-                heading: 'Time:',
+                heading: 'Time',
                 tailing: '10:30 AM',
               ),
               const SizedBox(
                 height: 10,
               ),
               const FieldInfo(
-                heading: 'Location:',
+                heading: 'Location',
                 tailing: 'Kochi',
               ),
               const SizedBox(
                 height: 10,
               ),
               const FieldInfo(
-                heading: 'Status:',
+                heading: 'Status',
                 tailing: 'Upcoming',
               ),
               const SizedBox(
                 height: 10,
               ),
               const FieldInfo(
-                heading: 'Category:',
+                heading: 'Category',
                 tailing: 'personal',
               ),
               const SizedBox(

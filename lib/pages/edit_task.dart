@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project1/widgets/task/add_task/add_task_topbar.dart';
-import 'package:project1/widgets/task/add_task/taskfields/task_field.dart';
+import 'package:project1/widgets/task/edit_task/edit_task_topbar.dart';
+import 'package:project1/widgets/task/edit_task/edit_taskfields/edit_task_ifield.dart';
 
-class AddTaskScreen extends StatelessWidget {
-  const AddTaskScreen({super.key});
+class EditTask extends StatelessWidget {
+  const EditTask({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +14,11 @@ class AddTaskScreen extends StatelessWidget {
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(
           children: const [
-            AddTaskTopbar(),
+            EditTaskTopbar(),
             SizedBox(
               height: 20,
             ),
-            Expanded(child: TaskField()),
+            Expanded(child: EditTaskField()),
           ],
         ),
       ),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:project1/widgets/event/event_field/event_categories.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
-import 'package:project1/widgets/task/taskfields/categories_task.dart';
+import 'package:project1/widgets/task/add_task/taskfields/categories_task.dart';
+import 'package:project1/widgets/task/edit_task/edit_taskfields/edit_task_categories.dart';
+import 'package:project1/widgets/task/edit_task/edit_taskfields/status_categories.dart';
 
-class TaskField extends StatelessWidget {
-  const TaskField({super.key});
+class EditTaskField extends StatelessWidget {
+  const EditTaskField({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +22,11 @@ class TaskField extends StatelessWidget {
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            const MyTextField(hint: 'Description'),
+            const MyTextField(hint: 'Change vehicle oil'),
             const SizedBox(
               height: 10,
             ),
-            const MyTextField(hint: 'Location'),
+            const MyTextField(hint: 'Kochi'),
             const SizedBox(
               height: 10,
             ),
@@ -33,10 +34,11 @@ class TaskField extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const CategoriesTask(),
+            const CategoriesEditTask(),
             const SizedBox(
               height: 10,
             ),
+            const CategoriesStatus()
             
             // const EventImage(),
             

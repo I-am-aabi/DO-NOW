@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/widgets/event/event.dart';
 
 class AllEvents extends StatelessWidget {
   const AllEvents({super.key});
@@ -12,15 +13,15 @@ class AllEvents extends StatelessWidget {
           border: Border.all(
               color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
       width: double.infinity,
-      child: Column(
-        // ignore: prefer_const_literals_to_create_immutables
-        children: [
-          const TextField(),
-          const TextField(),
-          const TextField(),
-          const TextField(),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListView(
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+           const Event()
 
-        ],
+          ],
+        ),
       ),
     );
   }

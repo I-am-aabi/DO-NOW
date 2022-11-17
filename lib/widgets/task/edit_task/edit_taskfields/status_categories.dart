@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CategoriesTask extends StatefulWidget {
-  const CategoriesTask({super.key});
+class CategoriesStatus extends StatefulWidget {
+  const CategoriesStatus({super.key});
 
   @override
-  State<CategoriesTask> createState() => _CategoriesTaskState();
+  State<CategoriesStatus> createState() => _CategoriesStatus();
 }
 
-class _CategoriesTaskState extends State<CategoriesTask> {
-  var dropitems = ['work', 'persnal', 'finantial'];
-  String _dropDownValue = 'Categories';
+class _CategoriesStatus extends State<CategoriesStatus> {
+  // var dropitems = ['work', 'persnal', 'finantial'];
+  String _dropDownValue = 'upcoming';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +25,7 @@ class _CategoriesTaskState extends State<CategoriesTask> {
             dropdownColor: const Color.fromARGB(255, 13, 33, 15),
             // ignore: unnecessary_null_comparison
             hint: _dropDownValue == null
-                ? const Text('Categories')
+                ? const Text('upcoming')
                 : Text(
                     _dropDownValue,
                     style: const TextStyle(color: Color.fromARGB(255, 69, 179, 75)),
@@ -33,7 +33,7 @@ class _CategoriesTaskState extends State<CategoriesTask> {
             isExpanded: true,
             iconSize: 30.0,
             style: const TextStyle(color: Color.fromARGB(255, 78, 190, 86)),
-            items: ['working', 'Personal', 'shopping'].map(
+            items: ['upcoming', 'completed', 'pending'].map(
               (val) {
                 return DropdownMenuItem<String>(
                   value: val,

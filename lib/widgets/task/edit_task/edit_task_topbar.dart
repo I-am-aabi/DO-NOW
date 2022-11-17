@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project1/functions/ontap_edit-task.dart';
 
-class ViewTaskTopbar extends StatelessWidget {
-  const ViewTaskTopbar({super.key});
+class EditTaskTopbar extends StatelessWidget {
+  const EditTaskTopbar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,14 +11,14 @@ class ViewTaskTopbar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            tapEditTask(context);
+            Navigator.pop(context);
           },
-          icon: const Icon(Icons.edit),
+          icon: const Icon(Icons.cancel),
           iconSize: 32,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),
         const Text(
-          'VIEW TASK',
+          'EDIT TASK',
           style: TextStyle(
             fontSize: 32,
             color: Color.fromARGB(255, 54, 191, 121),
@@ -27,7 +26,7 @@ class ViewTaskTopbar extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.delete),
+          icon: const Icon(Icons.done_outline),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),
         ),

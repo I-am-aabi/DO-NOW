@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/widgets/event/event_field/event_categories.dart';
-import 'package:project1/widgets/event/event_field/event_image.dart';
+import 'package:project1/widgets/event/add_event/event_field/event_categories.dart';
+import 'package:project1/widgets/event/add_event/event_field/event_image.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
 
