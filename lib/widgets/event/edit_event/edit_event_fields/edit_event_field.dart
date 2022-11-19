@@ -35,7 +35,7 @@ class _EditEventField extends State<EditEventField> {
             const SizedBox(
               height: 10,
             ),
-            const DateField(),
+             DateField(),
             const SizedBox(
               height: 10,
             ),
