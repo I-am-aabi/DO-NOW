@@ -13,15 +13,21 @@ class TaskModel {
   final String location;
 
   @HiveField(3)
-  final String datetime;
+  final String date;
 
   @HiveField(4)
   final int category;
 
-  TaskModel(
+  @HiveField(5)
+  final String time;
+
+  @HiveField(6)
+  final int status;
+  TaskModel(this.status, 
       {required this.discription,
       required this.location,
-      required this.datetime,
+      required this.date,
       required this.category,
+      required this.time, 
       required this.id});
 }
