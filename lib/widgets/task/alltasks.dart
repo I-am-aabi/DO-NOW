@@ -29,6 +29,7 @@ class AllTasks extends StatelessWidget {
                     discription: data.discription,
                     date: data.date,
                     time: data.time,
+                    index: index,
                   );
                 },
                 separatorBuilder: (ctx1, index) {

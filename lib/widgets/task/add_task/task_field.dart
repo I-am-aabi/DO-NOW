@@ -8,8 +8,8 @@ import 'package:project1/widgets/task/add_task/categories_task.dart';
 
 // typedef Taskvalue = TaskModel Function(TaskModel);
 
-final _descriptioncontroller = TextEditingController();
-final _locationcontroller = TextEditingController();
+var _descriptioncontroller = TextEditingController();
+var _locationcontroller = TextEditingController();
 final _datecontroller = TextEditingController();
 
 class TaskField extends StatelessWidget {
@@ -33,11 +33,11 @@ class TaskField extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             MyTextField(
-                hint: 'Description', ),
+                hint: 'Description', fieldcontroller: _descriptioncontroller),
             const SizedBox(
               height: 10,
             ),
-            MyTextField(hint: 'Location',),
+            MyTextField(hint: 'Location', fieldcontroller: _locationcontroller),
             const SizedBox(
               height: 10,
             ),
@@ -61,8 +61,9 @@ class TaskField extends StatelessWidget {
   }
 
   onAddTask() {
-    elements[0] = _descriptioncontroller.toString();
-    print(elements[0]);
-    elements[1] = _locationcontroller.toString();
+    elements[0] = _descriptioncontroller.text.trim();
+
+    elements[1] = _locationcontroller.text.trim();
+    // print(elements[1]);
   }
 }
