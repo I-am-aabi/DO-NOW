@@ -26,15 +26,15 @@ class _EventFieldState extends State<EventField> {
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            const MyTextField(hint: 'Description'),
+            // const MyTextField(hint: 'Description'),
             const SizedBox(
               height: 10,
             ),
-            const MyTextField(hint: 'Location'),
+            // const MyTextField(hint: 'Location'),
             const SizedBox(
               height: 10,
             ),
-             DateField(),
+            //  DateField(),
             const SizedBox(
               height: 10,
             ),

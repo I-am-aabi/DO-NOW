@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project1/functions/others/task_adder.dart';
+import 'package:project1/widgets/task/add_task/task_field.dart';
 
 class AddTaskTopbar extends StatelessWidget {
   const AddTaskTopbar({super.key});
@@ -25,7 +27,11 @@ class AddTaskTopbar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            TaskField().onAddTask();
+            taskAdder();
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.done_outline),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),

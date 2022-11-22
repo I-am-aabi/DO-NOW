@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/task_data_collector.dart';
 
 class CategoriesTask extends StatefulWidget {
   const CategoriesTask({super.key});
@@ -13,13 +14,13 @@ class _CategoriesTaskState extends State<CategoriesTask> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+      decoration: BoxDecoration(
           color: const Color.fromARGB(255, 0, 0, 0),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           border: Border.all(
               color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
       child: Padding(
-        padding: const EdgeInsets.only(left:8.0,right: 8),
+        padding: const EdgeInsets.only(left: 8.0, right: 8),
         child: DropdownButtonHideUnderline(
           child: DropdownButton(
             dropdownColor: const Color.fromARGB(255, 13, 33, 15),
@@ -28,7 +29,8 @@ class _CategoriesTaskState extends State<CategoriesTask> {
                 ? const Text('Categories')
                 : Text(
                     _dropDownValue,
-                    style: const TextStyle(color: Color.fromARGB(255, 69, 179, 75)),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 69, 179, 75)),
                   ),
             isExpanded: true,
             iconSize: 30.0,
@@ -45,6 +47,7 @@ class _CategoriesTaskState extends State<CategoriesTask> {
               setState(
                 () {
                   _dropDownValue = val!;
+                  elements[4] = _dropDownValue;
                 },
               );
             },

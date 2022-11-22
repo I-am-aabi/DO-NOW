@@ -21,7 +21,7 @@ class TaskModelAdapter extends TypeAdapter<TaskModel> {
       discription: fields[1] as String,
       location: fields[2] as String,
       date: fields[3] as String,
-      category: fields[4] as int,
+      category: fields[4] as String,
       time: fields[5] as String,
       id: fields[0] as String,
     );

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/task_data_collector.dart';
 
 class MyTextField extends StatelessWidget {
-  MyTextField({super.key, required this.hint, required this.fieldcontroller});
+   MyTextField(
+      {super.key, required this.hint,});
   final String hint;
-  final TextEditingController fieldcontroller;
+  
+  final fieldcontroller = TextEditingController();
   // allelements new allelements()
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       controller: fieldcontroller,
       style: TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
       decoration: InputDecoration(

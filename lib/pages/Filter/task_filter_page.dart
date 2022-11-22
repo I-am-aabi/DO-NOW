@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/widgets/Filter/costum_radio_buton.dart';
 import 'package:project1/widgets/Filter/filter_result.dart';
 import 'package:project1/widgets/other/date_field.dart';
-import 'package:project1/widgets/task/add_task/taskfields/categories_task.dart';
+import 'package:project1/widgets/task/add_task/categories_task.dart';
 
 class FilterPage extends StatelessWidget {
   const FilterPage({super.key});
@@ -48,7 +48,7 @@ class FilterPage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-               DateField(),
+              //  DateField(),
               const SizedBox(
                 height: 10,
               ),

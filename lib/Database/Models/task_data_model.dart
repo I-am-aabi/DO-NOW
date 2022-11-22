@@ -16,7 +16,7 @@ class TaskModel {
   final String date;
 
   @HiveField(4)
-  final int category;
+  final String category;
 
   @HiveField(5)
   final String time;

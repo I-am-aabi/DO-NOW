@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task_data_collector.dart';
 import 'package:project1/functions/others/datepicking.dart';
+import 'package:project1/functions/others/new_time_picker.dart';
 
-class DateField extends StatelessWidget {
-  DateField({super.key, required this.datecontroller});
-  String date = '';
-  TextEditingController datecontroller;
+class TimeField extends StatelessWidget {
+  TimeField({super.key});
+  String Time = '';
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: datecontroller,
       style: const TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
       decoration: InputDecoration(
         prefixIcon: const Icon(
@@ -36,9 +35,8 @@ class DateField extends StatelessWidget {
       ),
       readOnly: true,
       onTap: () async {
-        date = await pickDate(context);
-        // datecontroller.text = date;
-        elements[2] = date;
+        Time = await picktime(context);
+        elements[3] = Time;
       },
     );
   }

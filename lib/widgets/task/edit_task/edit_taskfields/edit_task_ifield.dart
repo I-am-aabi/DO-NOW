@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:project1/widgets/other/date_field.dart';
-import 'package:project1/widgets/other/textfield.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/edit_task_categories.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/status_categories.dart';
+
+final _discriptioncontroller = TextEditingController();
+final _locationcontroller = TextEditingController();
+final _datecontroller = TextEditingController();
 
 class EditTaskField extends StatelessWidget {
   const EditTaskField({super.key});
@@ -21,15 +24,16 @@ class EditTaskField extends StatelessWidget {
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            const MyTextField(hint: 'Change vehicle oil'),
+            // MyTextField(hint: 'Change vehicle oil',flag: 0),
             const SizedBox(
               height: 10,
             ),
-            const MyTextField(hint: 'Kochi'),
+            // MyTextField(hint: 'Kochi',
+            // flag: 1,),
             const SizedBox(
               height: 10,
             ),
-             DateField(),
+            DateField(datecontroller: _datecontroller),
             const SizedBox(
               height: 10,
             ),
@@ -38,12 +42,9 @@ class EditTaskField extends StatelessWidget {
               height: 10,
             ),
             const CategoriesStatus()
-            
-            // const EventImage(),
-            
 
-           
-           
+            // const EventImage(),
+
             // print('called'),
           ],
         ),
