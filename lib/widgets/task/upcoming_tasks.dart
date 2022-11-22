@@ -8,7 +8,7 @@ class NextTask extends StatelessWidget {
     return Expanded(
       child: Container(
           decoration:  BoxDecoration(
-        color: Color.fromARGB(255, 0, 0, 0),
+        color: const Color.fromARGB(255, 0, 0, 0),
         borderRadius: const BorderRadius.all(Radius.circular(25)),
         border: Border.all(color: const Color.fromARGB(255, 54, 191, 121),width: 2)
        ),
@@ -23,7 +23,7 @@ class NextTask extends StatelessWidget {
               children: const [
                 Text('TODAY',
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),)
               ],
@@ -37,12 +37,12 @@ class NextTask extends StatelessWidget {
               children: const [
                 Text('Task 1',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
                 Text('9:00 AM',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
               ],
@@ -56,12 +56,12 @@ class NextTask extends StatelessWidget {
               children: const [
                 Text('Task 1',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
                 Text('9:00 AM',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
               ],
@@ -75,12 +75,12 @@ class NextTask extends StatelessWidget {
               children: const [
                 Text('Task 1',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
                 Text('9:00 AM',
                    style: TextStyle(
-                  color: const Color.fromARGB(255, 54, 191, 121),
+                  color: Color.fromARGB(255, 54, 191, 121),
                   fontSize: 20
                 ),),
               ],

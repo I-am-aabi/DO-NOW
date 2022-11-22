@@ -20,7 +20,7 @@ class _MyTextFieldState extends State<MyTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.fieldcontroller,
-      style: TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
+      style: const TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
       decoration: InputDecoration(
         hintText: widget.hint,
         hintStyle: const TextStyle(color: Color.fromARGB(100, 123, 220, 126)),

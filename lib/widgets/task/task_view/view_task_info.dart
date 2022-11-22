@@ -50,7 +50,7 @@ class ViewTaskInfo extends StatelessWidget {
               ),
                FieldInfo(
                 heading: 'Status',
-                tailing: task?.status.toString(),
+                tailing: task?.status,
               ),
               const SizedBox(
                 height: 10,

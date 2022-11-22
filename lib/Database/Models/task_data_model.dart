@@ -22,7 +22,7 @@ class TaskModel {
   final String time;
 
   @HiveField(6)
-  final int status;
+  final String status;
   TaskModel(this.status, 
       {required this.discription,
       required this.location,

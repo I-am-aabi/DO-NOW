@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:project1/Database/Models/task_data_model.dart';
 import 'package:project1/Database/functions/add_task.dart';
 import 'package:project1/widgets/task/task.dart';
@@ -13,7 +10,7 @@ class AllTasks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 0, 0, 0),
+            color: const Color.fromARGB(255, 0, 0, 0),
             borderRadius: const BorderRadius.all(Radius.circular(25)),
             border: Border.all(
                 color: const Color.fromARGB(255, 54, 191, 121), width: 2)),

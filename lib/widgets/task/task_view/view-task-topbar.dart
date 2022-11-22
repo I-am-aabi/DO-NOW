@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_edit-task.dart';
+import 'package:project1/functions/others/task_delete.dart';
 
 class ViewTaskTopbar extends StatelessWidget {
-  const ViewTaskTopbar({super.key});
-
+  const ViewTaskTopbar({super.key, required this.index});
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -26,7 +27,9 @@ class ViewTaskTopbar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            deleteTask(index, context);
+          },
           icon: const Icon(Icons.delete),
           iconSize: 33,
           color: const Color.fromARGB(255, 54, 191, 121),
