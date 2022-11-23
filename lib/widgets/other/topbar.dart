@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_search.dart';
+import 'package:project1/utilities.dart';
 
 class TopBar extends StatelessWidget {
   const TopBar({super.key});
@@ -14,13 +15,13 @@ class TopBar extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(Icons.person),
           iconSize: 32,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          color: topbar,
         ),
-        const Text(
+         Text(
           'DO NOW',
           style: TextStyle(
             fontSize: 32,
-            color: Color.fromARGB(255, 54, 191, 121),
+            color: selection,
           ),
         ),
         IconButton(
@@ -29,7 +30,7 @@ class TopBar extends StatelessWidget {
           },
           icon: const Icon(Icons.search),
           iconSize: 33,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          color: topbar,
         ),
       ],
     );

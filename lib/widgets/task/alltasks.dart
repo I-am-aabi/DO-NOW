@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/Models/task_model/task_data_model.dart';
 import 'package:project1/Database/functions/task/add_task.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task.dart';
 
 class AllTasks extends StatelessWidget {
@@ -10,10 +11,11 @@ class AllTasks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 0, 0, 0),
-            borderRadius: const BorderRadius.all(Radius.circular(25)),
-            border: Border.all(
-                color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
+            color: container,
+            borderRadius: const BorderRadius.all(Radius.circular(15)),
+            // border: Border.all(
+            //     color: const Color.fromARGB(255, 54, 191, 121), width: 2)
+                ),
         width: double.infinity,
         // child: getNextEvent(),
         child: ValueListenableBuilder(
@@ -30,7 +32,10 @@ class AllTasks extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (ctx1, index) {
-                  return const Divider();
+                  return  Divider(
+                    thickness: 0.2,
+                    color: textcolor,
+                  );
                 },
                 itemCount: taskList.length);
           },

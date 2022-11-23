@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/Models/task_model/task_data_model.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_view/task_field_info.dart';
 
 class ViewTaskInfo extends StatelessWidget {
@@ -10,10 +11,11 @@ class ViewTaskInfo extends StatelessWidget {
     
     return Container(
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 0, 0, 0),
+          color: container,
           borderRadius: const BorderRadius.all(Radius.circular(25)),
-          border: Border.all(
-              color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
+          // border: Border.all(
+          //     color: const Color.fromARGB(255, 54, 191, 121), width: 2)
+          ),
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -67,7 +69,7 @@ class ViewTaskInfo extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 icon: const Icon(Icons.navigate_before_outlined),
-                color: const Color.fromARGB(255, 54, 191, 121),
+                color: selection,
               )
             ]),
       ),

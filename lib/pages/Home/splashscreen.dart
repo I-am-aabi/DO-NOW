@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:project1/pages/Home/homepage.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/other/navigationbar.dart';
 
 // ignore: camel_case_types
@@ -24,9 +25,9 @@ class _Splash_ScreenState extends State<Splash_Screen> {
   }
 
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 14, 33, 36),
-      body: Center(
+    return  Scaffold(
+      backgroundColor: background,
+      body: const Center(
         child: Text(
           'DO NOW',
           style:

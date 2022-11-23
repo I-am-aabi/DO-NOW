@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_view/view-task-topbar.dart';
 import 'package:project1/widgets/task/task_view/view_task_info.dart';
 
@@ -12,7 +13,7 @@ class ViewTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: background,
         body: Padding(
           padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
           child: Column(

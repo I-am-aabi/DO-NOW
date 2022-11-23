@@ -1,7 +1,7 @@
 import 'package:hive/hive.dart';
 part 'event_data_model.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 2)
 class eventModel {
   @HiveField(0)
   final String id;

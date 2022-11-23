@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/Models/task_model/task_data_model.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
 import 'package:project1/widgets/other/time_field.dart';
@@ -22,10 +23,11 @@ class TaskField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 0, 0, 0),
+          color: container,
           borderRadius: const BorderRadius.all(Radius.circular(25)),
-          border: Border.all(
-              color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
+          // border: Border.all(
+          //     color: const Color.fromARGB(255, 54, 191, 121), width: 2)
+          ),
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(10.0),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/Models/event_model/event_data_model.dart';
+import 'package:project1/Database/functions/event/add_event.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/event/event.dart';
 
 class AllEvents extends StatelessWidget {
@@ -8,21 +11,32 @@ class AllEvents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 0, 0, 0),
-          borderRadius: const BorderRadius.all(Radius.circular(25)),
-          border: Border.all(
-              color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
+        color: container,
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
+      ),
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: ListView(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-           const Event()
-
-          ],
-        ),
-      ),
+          padding: const EdgeInsets.all(10.0),
+          child: ValueListenableBuilder(
+              valueListenable: eventListNotifier,
+              builder: ((BuildContext ctx, List<eventModel> evenList,
+                  Widget? child) {
+                return ListView.separated(
+                    itemBuilder: ((ctx1, index) {
+                      final data = evenList[index];
+                      return Event(
+                        discription: data.discription,
+                        date: data.date,
+                        time: data.time,
+                        path: data.path,
+                        index: index,
+                      );
+                    }),
+                    separatorBuilder: ((ctx1, index) {
+                      return Divider();
+                    }),
+                    itemCount: evenList.length);
+              }))),
     );
   }
 }

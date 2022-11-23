@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
+import 'package:project1/utilities.dart';
 
 class MyTextField extends StatefulWidget {
   MyTextField({
@@ -20,22 +21,22 @@ class _MyTextFieldState extends State<MyTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.fieldcontroller,
-      style: const TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
+      style:  TextStyle(color: textcolor),
       decoration: InputDecoration(
         hintText: widget.hint,
-        hintStyle: const TextStyle(color: Color.fromARGB(100, 123, 220, 126)),
+        hintStyle:  TextStyle(color:topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(
-            color: Color.fromARGB(255, 54, 191, 121),
-            width: 1.0,
+          borderSide:  BorderSide(
+            color: selection,
+            width: 0.2,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide: const BorderSide(
-            color: Colors.green,
-            width: 2.0,
+          borderSide:  BorderSide(
+            color: selection,
+            width: 0.7,
           ),
         ),
       ),

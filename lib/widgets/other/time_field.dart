@@ -1,36 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/new_time_picker.dart';
+import 'package:project1/utilities.dart';
 
 // ignore: must_be_immutable
 class TimeField extends StatelessWidget {
   TimeField({super.key});
   // ignore: non_constant_identifier_names
   String Time = '';
+  final timecontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: const TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
+      controller: timecontroller,
+      style: TextStyle(color: textcolor),
       decoration: InputDecoration(
-        prefixIcon: const Icon(
+        prefixIcon: Icon(
           Icons.timer,
-          color: Color.fromARGB(255, 54, 191, 121),
+          color: selection,
         ),
         //  labelText: "Enter Date",
         hintText: 'Time',
-        hintStyle: const TextStyle(color: Color.fromARGB(100, 123, 220, 126)),
+        hintStyle: TextStyle(color: topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(
-            color: Color.fromARGB(255, 54, 191, 121),
-            width: 1.0,
+          borderSide: BorderSide(
+            color: selection,
+            width: 0.5,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide: const BorderSide(
-            color: Colors.green,
-            width: 2.0,
+          borderSide: BorderSide(
+            color: selection,
+            width: 1.3,
           ),
         ),
       ),
@@ -38,6 +41,7 @@ class TimeField extends StatelessWidget {
       onTap: () async {
         Time = await picktime(context);
         elements[3] = Time;
+        timecontroller.text = Time;
       },
     );
   }

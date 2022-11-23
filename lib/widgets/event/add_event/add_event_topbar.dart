@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/event/event_adder.dart';
+import 'package:project1/utilities.dart';
 
 class AddEventTopbar extends StatelessWidget {
   const AddEventTopbar({super.key});
@@ -7,28 +9,31 @@ class AddEventTopbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: const Icon(Icons.cancel),
-          iconSize: 32,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          iconSize: 25,
+          color: selection,
         ),
-        const Text(
+         Text(
           'ADD EVENTS',
           style: TextStyle(
             fontSize: 32,
-            color: Color.fromARGB(255, 54, 191, 121),
+            color: selection,
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            eventAdder(context);
+          },
           icon: const Icon(Icons.done_outline),
-          iconSize: 33,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          iconSize: 25,
+          color: selection
+          ,
         ),
       ],
     );

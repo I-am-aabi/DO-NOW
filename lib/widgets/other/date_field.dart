@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/datepicking.dart';
+import 'package:project1/utilities.dart';
 
 // ignore: must_be_immutable
 class DateField extends StatelessWidget {
@@ -11,27 +12,27 @@ class DateField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: datecontroller,
-      style: const TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
+      style: TextStyle(color: textcolor),
       decoration: InputDecoration(
-        prefixIcon: const Icon(
+        prefixIcon: Icon(
           Icons.calendar_today,
-          color: Color.fromARGB(255, 54, 191, 121),
+          color: selection,
         ),
         //  labelText: "Enter Date",
         hintText: 'Date',
-        hintStyle: const TextStyle(color: Color.fromARGB(100, 123, 220, 126)),
+        hintStyle:  TextStyle(color: topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide: const BorderSide(
-            color: Color.fromARGB(255, 54, 191, 121),
-            width: 1.0,
+          borderSide:  BorderSide(
+            color: selection,
+            width: 0.5,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide: const BorderSide(
-            color: Colors.green,
-            width: 2.0,
+          borderSide:  BorderSide(
+            color: selection,
+            width: 1.3,
           ),
         ),
       ),
@@ -39,6 +40,7 @@ class DateField extends StatelessWidget {
       onTap: () async {
         date = await pickDate(context);
         elements[2] = date;
+        datecontroller.text = date;
       },
     );
   }

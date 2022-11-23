@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_adder.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/add_task/task_field.dart';
 
 class AddTaskTopbar extends StatelessWidget {
@@ -9,21 +10,21 @@ class AddTaskTopbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: const Icon(Icons.cancel),
-          iconSize: 32,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          iconSize: 25,
+          color: selection,
         ),
-        const Text(
+        Text(
           'ADD TASK',
           style: TextStyle(
             fontSize: 32,
-            color: Color.fromARGB(255, 54, 191, 121),
+            color: selection,
           ),
         ),
         IconButton(
@@ -34,8 +35,8 @@ class AddTaskTopbar extends StatelessWidget {
             Navigator.pop(context);
           },
           icon: const Icon(Icons.done_outline),
-          iconSize: 33,
-          color: const Color.fromARGB(255, 54, 191, 121),
+          iconSize: 25,
+          color: selection,
         ),
       ],
     );

@@ -8,7 +8,7 @@ part of 'event_data_model.dart';
 
 class eventModelAdapter extends TypeAdapter<eventModel> {
   @override
-  final int typeId = 1;
+  final int typeId = 2;
 
   @override
   eventModel read(BinaryReader reader) {

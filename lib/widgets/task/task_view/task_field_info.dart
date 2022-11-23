@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
 import 'package:flutter/cupertino.dart';
+import 'package:project1/utilities.dart';
 
 class FieldInfo extends StatelessWidget {
   const FieldInfo({super.key, this.heading, this.tailing});
@@ -15,13 +16,13 @@ class FieldInfo extends StatelessWidget {
             children: [
                Text(
                 '$heading:',
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+                style:  TextStyle(
+                    color: textcolor, fontSize: 20),
               ),
                Text(
                 tailing,
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+                style:  TextStyle(
+                    color: textcolor, fontSize: 20),
               )
             ],
       

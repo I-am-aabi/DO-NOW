@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/Models/task_model/task_data_model.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/add_task/add_task_topbar.dart';
 import 'package:project1/widgets/task/add_task/task_field.dart';
 
@@ -11,7 +12,7 @@ class AddTaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor:background,
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(

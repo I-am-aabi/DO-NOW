@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_viewtask.dart';
+import 'package:project1/utilities.dart';
 
 class Task extends StatelessWidget {
   const Task(
@@ -20,28 +21,28 @@ class Task extends StatelessWidget {
         children: [
           Text(
             discription,
-            style: const TextStyle(
-                color: Color.fromARGB(255, 54, 191, 121), fontSize: 16),
+            style:  TextStyle(
+                color: textcolor, fontSize: 20),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 date,
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 54, 191, 121), fontSize: 16),
+                style:  TextStyle(
+                    color: textcolor, fontSize: 16),
               ),
               IconButton(
                 onPressed: (() {
                   tapviewTask(context,index);
                 }),
                 icon: const Icon(Icons.visibility),
-                color: const Color.fromARGB(255, 78, 190, 86),
+                color: textcolor,
               ),
               Text(
                 time,
-                style: const TextStyle(
-                    color: Color.fromARGB(255, 54, 191, 121), fontSize: 16),
+                style:  TextStyle(
+                    color: textcolor, fontSize: 16),
               )
             ],
           )

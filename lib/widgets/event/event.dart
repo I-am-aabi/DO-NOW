@@ -1,49 +1,48 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_view_event.dart';
+import 'package:project1/utilities.dart';
 
 class Event extends StatelessWidget {
-  const Event({super.key});
-
+  const Event({super.key, required this.discription, required this.date, required this.time, required this.path, required this.index});
+  final String discription;
+  final String date;
+  final String time;
+  final String path;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Text(
-              'Christmas',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
-            ),
-            Text(
-              'Party hall',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
-            )
-          ],
+        Text(
+             discription,
+          style: TextStyle(color: textcolor, fontSize: 20),
         ),
-        Image.asset('assets/images/festival.jpg'),
+        const SizedBox(
+          height: 5,
+        ),
+        Image.file(File(path),
+       
+        scale: 1.5,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              '25-12-2022',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            Text(
+              date,
+              style: TextStyle(color: textcolor, fontSize: 20),
             ),
             IconButton(
               onPressed: () {
                 tapViewEvent(context);
               },
               icon: const Icon(Icons.visibility),
-              color: const Color.fromARGB(255, 54, 191, 121),
+              color: textcolor,
             ),
-            const Text(
-              '8:00 PM',
-              style: TextStyle(
-                  color: Color.fromARGB(255, 54, 191, 121), fontSize: 20),
+            Text(
+              time,
+              style: TextStyle(color: textcolor, fontSize: 20),
             )
           ],
         )
