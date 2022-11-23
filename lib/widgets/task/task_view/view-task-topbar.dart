@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_edit-task.dart';
-import 'package:project1/functions/others/task_delete.dart';
+import 'package:project1/Database/functions/task/task_delete.dart';
 
 class ViewTaskTopbar extends StatelessWidget {
   const ViewTaskTopbar({super.key, required this.index});

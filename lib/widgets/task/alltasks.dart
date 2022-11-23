@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/Database/Models/task_data_model.dart';
-import 'package:project1/Database/functions/add_task.dart';
+import 'package:project1/Database/Models/task_model/task_data_model.dart';
+import 'package:project1/Database/functions/task/add_task.dart';
 import 'package:project1/widgets/task/task.dart';
 
 class AllTasks extends StatelessWidget {

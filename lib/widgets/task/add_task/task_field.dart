@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/Database/Models/task_data_model.dart';
-import 'package:project1/Database/functions/task_data_collector.dart';
+import 'package:project1/Database/Models/task_model/task_data_model.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
 import 'package:project1/widgets/other/time_field.dart';

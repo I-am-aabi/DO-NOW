@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_categories.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_image.dart';
 import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
+import 'package:project1/widgets/other/time_field.dart';
 
 class EventField extends StatefulWidget {
   const EventField({super.key});
 
+  get onAddevent => null;
+
   @override
   State<EventField> createState() => _EventFieldState();
 }
+
+final _eventdescription = TextEditingController();
+final _eventlocation = TextEditingController();
+final _evendate = TextEditingController();
 
 class _EventFieldState extends State<EventField> {
   @override
@@ -26,15 +34,19 @@ class _EventFieldState extends State<EventField> {
         child: ListView(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            // const MyTextField(hint: 'Description'),
+            MyTextField(
+                hint: 'Description', fieldcontroller: _eventdescription),
             const SizedBox(
               height: 10,
             ),
-            // const MyTextField(hint: 'Location'),
+            MyTextField(hint: 'Location', fieldcontroller: _eventlocation),
             const SizedBox(
               height: 10,
             ),
-            //  DateField(),
+            Row(
+              children: [Expanded(child: DateField(datecontroller: _evendate)), Expanded(child: TimeField())],
+            ),
+
             const SizedBox(
               height: 10,
             ),
@@ -42,16 +54,18 @@ class _EventFieldState extends State<EventField> {
             const SizedBox(
               height: 10,
             ),
-            
-            const EventImage(),
-            
 
-           
-           
+            const EventImage(),
+
             // print('called'),
           ],
         ),
       ),
     );
+  }
+
+  onAddevent() {
+    elements[0] = _eventdescription.text;
+    elements[1] = _eventlocation.text.trim();
   }
 }

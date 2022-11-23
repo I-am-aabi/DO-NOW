@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:project1/pages/Home/splashscreen.dart';
 
-import 'Database/Models/task_data_model.dart';
+import 'Database/Models/task_model/task_data_model.dart';
 
 Future<void> main() async{
   await Hive.initFlutter();

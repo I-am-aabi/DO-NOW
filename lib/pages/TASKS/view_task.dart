@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/widgets/task/task_view/view-task-topbar.dart';
 import 'package:project1/widgets/task/task_view/view_task_info.dart';
 
-import '../../Database/Models/task_data_model.dart';
+import '../../Database/Models/task_model/task_data_model.dart';
 
 class ViewTask extends StatelessWidget {
   const ViewTask({super.key, required this.task, required this.index});

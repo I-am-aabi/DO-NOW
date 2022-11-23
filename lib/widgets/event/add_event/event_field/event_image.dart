@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/image_picker.dart';
 
 class EventImage extends StatefulWidget {
@@ -27,9 +28,10 @@ class _EventImageState extends State<EventImage> {
         onTap: () async {
           var newpath = await pickImage();
           setState(() {
-            print('1st$path');
+            // print('1st$path');
             path = newpath;
-            print(path);
+            elements[5] = path;
+            // print(path);
           });
         },
       ),

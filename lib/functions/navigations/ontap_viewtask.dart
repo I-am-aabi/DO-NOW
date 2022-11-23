@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project1/Database/functions/task_selector.dart';
+import 'package:project1/Database/functions/task/task_selector.dart';
 import 'package:project1/pages/TASKS/view_task.dart';
 
 void tapviewTask(context, index) async {
