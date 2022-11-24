@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/event/event_data_collector.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/utilities.dart';
 
@@ -48,7 +49,7 @@ class _CategoriesEventState extends State<CategoriesEvent> {
               setState(
                 () {
                   _dropDownValue = val!;
-                  elements[4] = _dropDownValue;
+                  eventelements[4] = _dropDownValue;
                 },
               );
             },

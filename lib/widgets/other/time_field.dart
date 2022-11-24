@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/event/event_data_collector.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/new_time_picker.dart';
 import 'package:project1/utilities.dart';
@@ -40,7 +41,7 @@ class TimeField extends StatelessWidget {
       readOnly: true,
       onTap: () async {
         Time = await picktime(context);
-        elements[3] = Time;
+        eventelements[3] = Time;
         timecontroller.text = Time;
       },
     );

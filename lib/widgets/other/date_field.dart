@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/event/event_data_collector.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/datepicking.dart';
 import 'package:project1/utilities.dart';
@@ -39,7 +40,7 @@ class DateField extends StatelessWidget {
       readOnly: true,
       onTap: () async {
         date = await pickDate(context);
-        elements[2] = date;
+        eventelements[2] = date;
         datecontroller.text = date;
       },
     );

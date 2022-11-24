@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_edit-task.dart';
 import 'package:project1/Database/functions/task/task_delete.dart';
@@ -18,7 +19,7 @@ class ViewTaskTopbar extends StatelessWidget {
           },
           icon: const Icon(Icons.edit),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
          Text(
           'VIEW TASK',
@@ -33,7 +34,7 @@ class ViewTaskTopbar extends StatelessWidget {
           },
           icon: const Icon(Icons.delete),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
       ],
     );

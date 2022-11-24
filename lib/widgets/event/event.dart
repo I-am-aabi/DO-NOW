@@ -23,9 +23,13 @@ class Event extends StatelessWidget {
         const SizedBox(
           height: 5,
         ),
-        Image.file(File(path),
+        Container(
+          height: 200,
+          width: 200,
+          child: Image.file(File(path),
        
-        scale: 1.5,),
+          scale: 1.5,),
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -35,7 +39,7 @@ class Event extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                tapViewEvent(context);
+                tapViewEvent(context,index);
               },
               icon: const Icon(Icons.visibility),
               color: textcolor,

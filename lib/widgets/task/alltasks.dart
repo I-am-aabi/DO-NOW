@@ -32,9 +32,12 @@ class AllTasks extends StatelessWidget {
                   );
                 },
                 separatorBuilder: (ctx1, index) {
-                  return  Divider(
-                    thickness: 0.2,
-                    color: textcolor,
+                  return  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Divider(
+                      thickness: 0.5,
+                      color: selection,
+                    ),
                   );
                 },
                 itemCount: taskList.length);

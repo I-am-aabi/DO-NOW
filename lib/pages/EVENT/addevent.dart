@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
-import 'package:project1/widgets/event/add_event/add_event_topbar.dart';
+import 'package:project1/widgets/event/add_event/event_field/add_event_topbar.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_field.dart';
 
 
@@ -20,13 +20,13 @@ class _AddEventState extends State<AddEvent> {
         body: Padding(
           padding:  const EdgeInsets.only(left: 30,right: 30,top: 20),
           child: Column(
-            children: const [
-              AddEventTopbar(),
-              SizedBox(
+            children:  [
+              const AddEventTopbar(),
+              const SizedBox(
                 height: 30,
               ),
               Expanded(child: EventField()),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               

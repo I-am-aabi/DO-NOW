@@ -48,8 +48,8 @@ class NextTask extends StatelessWidget {
                 ),),
               ],
             ),
-            const Divider(
-              color: Color.fromARGB(255, 63, 153, 189),
+             Divider(
+              color: selection,
               thickness: 1,
             ),
                 Row(
@@ -67,8 +67,8 @@ class NextTask extends StatelessWidget {
                 ),),
               ],
             ),
-            const Divider(
-              color: Color.fromARGB(255, 63, 153, 189),
+             Divider(
+              color: selection,
               thickness: 1,
             ),
                 Row(

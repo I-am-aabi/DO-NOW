@@ -18,7 +18,7 @@ class TaskTopBar extends StatelessWidget {
           },
           icon: const Icon(Icons.add_circle_outline),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
          Text(
           'TASKS',
@@ -33,7 +33,7 @@ class TaskTopBar extends StatelessWidget {
           },
           icon: const Icon(Icons.filter_alt),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
       ],
     );

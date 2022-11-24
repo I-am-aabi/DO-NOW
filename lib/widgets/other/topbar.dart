@@ -9,12 +9,12 @@ class TopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.person),
-          iconSize: 32,
+          iconSize: 25,
           color: topbar,
         ),
          Text(
@@ -29,7 +29,7 @@ class TopBar extends StatelessWidget {
             tapSearch(context);
           },
           icon: const Icon(Icons.search),
-          iconSize: 33,
+          iconSize: 25,
           color: topbar,
         ),
       ],

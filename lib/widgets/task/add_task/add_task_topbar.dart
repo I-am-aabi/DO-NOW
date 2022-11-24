@@ -18,7 +18,7 @@ class AddTaskTopbar extends StatelessWidget {
           },
           icon: const Icon(Icons.cancel),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
         Text(
           'ADD TASK',
@@ -36,7 +36,7 @@ class AddTaskTopbar extends StatelessWidget {
           },
           icon: const Icon(Icons.done_outline),
           iconSize: 25,
-          color: selection,
+          color: topbar,
         ),
       ],
     );

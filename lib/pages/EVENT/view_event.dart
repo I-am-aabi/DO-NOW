@@ -1,34 +1,35 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
+import 'package:project1/Database/Models/event_model/event_data_model.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/event/view_event/view_event_info.dart';
 import 'package:project1/widgets/event/view_event/view_event_topbar.dart';
-import 'package:project1/widgets/task/task_view/view-task-topbar.dart';
-import 'package:project1/widgets/task/task_view/view_task_info.dart';
 
 class ViewEvent extends StatelessWidget {
-  const ViewEvent({super.key});
-
+  const ViewEvent({super.key, required this.Event, required this.index});
+  final eventModel? Event;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: background,
         body: Padding(
-          padding:  const EdgeInsets.only(left: 30,right: 30,top: 20),
+          padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
           child: Column(
-            children: const [
-              ViewEventTopbar(),
-              SizedBox(
+            children:  [
+              ViewEventTopbar(index: index),
+              const SizedBox(
                 height: 30,
               ),
-              Expanded(child: ViewEventInfo()),
-              SizedBox(
+              Expanded(child: ViewEventInfo(Event: Event,)),
+              const SizedBox(
                 height: 20,
               ),
-              
             ],
           ),
         ),
-        
       ),
     );
   }
