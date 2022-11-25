@@ -12,28 +12,38 @@ class EventTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            tapAddEvent(context);
-          },
-          icon: const Icon(Icons.add_circle_outline),
-          iconSize: 25,
-          color: topbar,
-        ),
-         Text(
-          'EVENTS',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            padding: const EdgeInsets.all(0),
+            onPressed: () {
+              tapAddEvent(context);
+            },
+            icon: const Icon(Icons.add),
+            iconSize: 22,
             color: selection,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            tapEventFilter(context);
-          },
-          icon: const Icon(Icons.filter_alt),
-          iconSize: 25,
-          color: topbar,
+         Text(
+          'events',
+          style: TextStyle(
+            fontSize: 27,
+            color: selection,
+            fontFamily: 'suii',
+            fontWeight: FontWeight.w300
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              tapEventFilter(context);
+            },
+            padding: const EdgeInsets.all(0),
+            icon: const Icon(Icons.filter_alt_outlined),
+            iconSize: 22,
+            color: selection,
+          ),
         ),
       ],
     );

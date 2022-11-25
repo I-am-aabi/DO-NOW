@@ -5,7 +5,13 @@ import 'package:project1/functions/navigations/ontap_view_event.dart';
 import 'package:project1/utilities.dart';
 
 class Event extends StatelessWidget {
-  const Event({super.key, required this.discription, required this.date, required this.time, required this.path, required this.index});
+  const Event(
+      {super.key,
+      required this.discription,
+      required this.date,
+      required this.time,
+      required this.path,
+      required this.index});
   final String discription;
   final String date;
   final String time;
@@ -13,44 +19,50 @@ class Event extends StatelessWidget {
   final int index;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-             discription,
-          style: TextStyle(color: textcolor, fontSize: 20),
+    return GestureDetector(
+      onTap: () => tapViewEvent(context, index),
+      child: Container(
+        decoration: BoxDecoration(
+          color: container,
+          borderRadius: BorderRadius.circular(15),
         ),
-        const SizedBox(
-          height: 5,
+        child: Padding(
+          padding: const EdgeInsets.only(top:15,bottom: 15,left: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 150,
+                width: 220,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image(fit: BoxFit.cover, image: FileImage(File(path))),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                date,
+                style: TextStyle(color: textcolor, fontSize: 12,
+                fontFamily: 'suii'),
+              ),
+              Text(discription,
+              style: TextStyle(
+                color: textcolor,
+                fontFamily: 'suii',
+                fontSize: 17
+              ),),
+              Text(
+                time,
+                style: TextStyle(color: textcolor, fontSize: 12,
+                fontFamily: 'suii'),
+              )
+            ],
+          ),
         ),
-        Container(
-          height: 200,
-          width: 200,
-          child: Image.file(File(path),
-       
-          scale: 1.5,),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              date,
-              style: TextStyle(color: textcolor, fontSize: 20),
-            ),
-            IconButton(
-              onPressed: () {
-                tapViewEvent(context,index);
-              },
-              icon: const Icon(Icons.visibility),
-              color: textcolor,
-            ),
-            Text(
-              time,
-              style: TextStyle(color: textcolor, fontSize: 20),
-            )
-          ],
-        )
-      ],
+      ),
     );
   }
 }

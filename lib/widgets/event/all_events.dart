@@ -11,7 +11,7 @@ class AllEvents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: container,
+        color: background,
         borderRadius: const BorderRadius.all(Radius.circular(15)),
       ),
       width: double.infinity,
