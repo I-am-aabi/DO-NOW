@@ -42,6 +42,7 @@ class TimeField extends StatelessWidget {
       onTap: () async {
         Time = await picktime(context);
         eventelements[3] = Time;
+        elements[3] = Time;
         timecontroller.text = Time;
       },
     );

@@ -21,17 +21,17 @@ class DateField extends StatelessWidget {
         ),
         //  labelText: "Enter Date",
         hintText: 'Date',
-        hintStyle:  TextStyle(color: topbar),
+        hintStyle: TextStyle(color: topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide:  BorderSide(
+          borderSide: BorderSide(
             color: selection,
             width: 0.5,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide:  BorderSide(
+          borderSide: BorderSide(
             color: selection,
             width: 1.3,
           ),
@@ -41,6 +41,7 @@ class DateField extends StatelessWidget {
       onTap: () async {
         date = await pickDate(context);
         eventelements[2] = date;
+        elements[2] = date;
         datecontroller.text = date;
       },
     );
