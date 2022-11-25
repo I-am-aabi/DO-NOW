@@ -4,14 +4,9 @@ import 'package:project1/widgets/event/add_event/event_field/add_event_topbar.da
 import 'package:project1/widgets/event/add_event/event_field/event_field.dart';
 
 
-class AddEvent extends StatefulWidget {
+class AddEvent extends StatelessWidget {
   const AddEvent({super.key});
 
-  @override
-  State<AddEvent> createState() => _AddEventState();
-}
-
-class _AddEventState extends State<AddEvent> {
   @override
   Widget build(BuildContext context) {
     return   SafeArea(

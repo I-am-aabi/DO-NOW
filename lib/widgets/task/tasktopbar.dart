@@ -12,28 +12,38 @@ class TaskTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            tapAddTask(context);
-          },
-          icon: const Icon(Icons.add_circle_outline),
-          iconSize: 25,
-          color: topbar,
-        ),
-         Text(
-          'TASKS',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            padding: const EdgeInsets.all(0),
+            onPressed: () {
+              tapAddTask(context);
+            },
+            icon: const Icon(Icons.add),
+            iconSize: 22,
             color: selection,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            tapFilter(context);
-          },
-          icon: const Icon(Icons.filter_alt),
-          iconSize: 25,
-          color: topbar,
+        Text(
+          'tasks',
+          style: TextStyle(
+            fontFamily: 'suii',
+            fontWeight: FontWeight.w300,
+            fontSize: 27,
+            color: selection,
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              tapFilter(context);
+            },
+            padding: const EdgeInsets.all(0),
+            icon: const Icon(Icons.filter_alt_outlined),
+            iconSize: 22,
+            color: selection,
+          ),
         ),
       ],
     );

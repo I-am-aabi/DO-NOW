@@ -5,14 +5,9 @@ import 'package:project1/widgets/event/add_event/event_field/add_event_topbar.da
 import 'package:project1/widgets/event/all_events.dart';
 import 'package:project1/widgets/event/event_top_bar.dart';
 
-class EventScreen extends StatefulWidget {
+class EventScreen extends StatelessWidget {
   const EventScreen({super.key});
 
-  @override
-  State<EventScreen> createState() => _EventScreenState();
-}
-
-class _EventScreenState extends State<EventScreen> {
   @override
   Widget build(BuildContext context) {
     getAllEvent();

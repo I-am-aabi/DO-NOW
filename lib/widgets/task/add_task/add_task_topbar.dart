@@ -12,31 +12,40 @@ class AddTaskTopbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.cancel),
-          iconSize: 25,
-          color: topbar,
-        ),
-        Text(
-          'ADD TASK',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            padding: const EdgeInsets.all(0),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.cancel_outlined),
+            iconSize: 22,
             color: selection,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            TaskField().onAddTask();
-      
-            taskAdder();
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.done_outline),
-          iconSize: 25,
-          color: topbar,
+        Text(
+          'add tasks',
+          style: TextStyle(
+            fontFamily: 'suii',
+            fontWeight: FontWeight.w300,
+            fontSize: 27,
+            color: selection,
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              TaskField().onAddTask();
+              taskAdder();
+              Navigator.pop(context);
+            },
+            padding: const EdgeInsets.all(0),
+            icon: const Icon(Icons.done_outline),
+            iconSize: 22,
+            color: selection,
+          ),
         ),
       ],
     );

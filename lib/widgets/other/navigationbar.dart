@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:molten_navigationbar_flutter/molten_navigationbar_flutter.dart';
 import 'package:project1/pages/EVENT/eventpage.dart';
-import 'package:project1/pages/Home/homepage.dart';
 import 'package:project1/pages/TASKS/taskpage.dart';
 import 'package:project1/utilities.dart';
 
@@ -14,8 +13,8 @@ class naviBar extends StatefulWidget {
   State<naviBar> createState() => _naviBarState();
 }
 
-List pagelist = [const TaskScreen(), const HomePage(), const EventScreen()];
-int _selectedIndex = 1;
+List pagelist = [const TaskScreen(),  const EventScreen()];
+int _selectedIndex = 0;
 
 class _naviBarState extends State<naviBar> {
   @override
@@ -28,7 +27,6 @@ class _naviBarState extends State<naviBar> {
         domeCircleColor: selection,
           tabs: [
             MoltenTab(icon: const Icon(Icons.task)),
-            MoltenTab(icon: const Icon(Icons.home)),
             MoltenTab(icon: const Icon(Icons.event))
           ],
           selectedIndex: _selectedIndex,
