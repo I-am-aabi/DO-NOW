@@ -24,6 +24,8 @@ class _CategoriesTaskState extends State<CategoriesTask> {
         padding: const EdgeInsets.only(left: 8.0, right: 8),
         child: DropdownButtonHideUnderline(
           child: DropdownButton(
+            // icon:  Icon(Icons.category,
+            // color: selection,),
             dropdownColor: background,
             // ignore: unnecessary_null_comparison
             hint: _dropDownValue == null

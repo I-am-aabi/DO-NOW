@@ -19,7 +19,7 @@ class AddTaskTopbar extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.cancel_outlined),
+            icon: const Icon(Icons.close),
             iconSize: 22,
             color: selection,
           ),
@@ -42,7 +42,7 @@ class AddTaskTopbar extends StatelessWidget {
               Navigator.pop(context);
             },
             padding: const EdgeInsets.all(0),
-            icon: const Icon(Icons.done_outline),
+            icon: const Icon(Icons.done),
             iconSize: 22,
             color: selection,
           ),

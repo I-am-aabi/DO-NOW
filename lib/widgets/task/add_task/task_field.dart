@@ -35,17 +35,18 @@ class TaskField extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             MyTextField(
-                hint: 'Description', fieldcontroller: _descriptioncontroller),
+                hint: 'Description', fieldcontroller: _descriptioncontroller,fieldiconData: Icons.subject),
             const SizedBox(
               height: 10,
             ),
-            MyTextField(hint: 'Location', fieldcontroller: _locationcontroller),
+            MyTextField(hint: 'Location', fieldcontroller: _locationcontroller,fieldiconData: Icons.location_on),
             const SizedBox(
               height: 10,
             ),
             Row(
               children: [
                 Expanded(child: DateField(datecontroller: _datecontroller)),
+                const SizedBox(width: 5,),
                 Expanded(child: TimeField())
               ],
             ),

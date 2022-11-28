@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/Models/task_model/task_data_model.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/edit_task/edit_task_topbar.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/edit_task_ifield.dart';
 
 class EditTask extends StatelessWidget {
-  const EditTask({super.key});
-
+  const EditTask({super.key, required this.task, required this.index});
+  final TaskModel? task;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: background,
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(
-          children: const [
-            EditTaskTopbar(),
-            SizedBox(
-              height: 20,
+          children:  [
+            const EditTaskTopbar(),
+            const SizedBox(
+              height: 30,
             ),
-            Expanded(child: EditTaskField()),
+            Expanded(child: EditTaskField(task: task,)),
           ],
         ),
       ),

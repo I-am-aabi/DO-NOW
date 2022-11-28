@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
 
 class MyTextField extends StatefulWidget {
-  MyTextField({
+  const MyTextField({
     super.key,
-    required this.hint, required this.fieldcontroller,
+    required this.hint,
+    required this.fieldcontroller,
+    this.fieldiconData,  this.initial,
   });
   final String hint;
 
+  final String? initial;
   final TextEditingController fieldcontroller;
 
+  final IconData? fieldiconData;
   @override
   State<MyTextField> createState() => _MyTextFieldState();
 }
@@ -20,21 +24,26 @@ class _MyTextFieldState extends State<MyTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      // initialValue: widget.initial,
       controller: widget.fieldcontroller,
-      style:  TextStyle(color: textcolor),
+      style: TextStyle(color: textcolor),
       decoration: InputDecoration(
+        prefixIcon: Icon(
+          widget.fieldiconData,
+          color: selection,
+        ),
         hintText: widget.hint,
-        hintStyle:  TextStyle(color:topbar),
+        hintStyle: TextStyle(color: topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
-          borderSide:  BorderSide(
+          borderSide: BorderSide(
             color: selection,
             width: 0.2,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
-          borderSide:  BorderSide(
+          borderSide: BorderSide(
             color: selection,
             width: 0.7,
           ),

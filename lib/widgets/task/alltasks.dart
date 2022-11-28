@@ -38,7 +38,7 @@ class AllTasks extends StatelessWidget {
                   return const Padding(
                     padding: EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                   );
                 },

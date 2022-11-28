@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/utilities.dart';
 
 class EditTaskTopbar extends StatelessWidget {
   const EditTaskTopbar({super.key});
@@ -7,28 +8,37 @@ class EditTaskTopbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.cancel),
-          iconSize: 32,
-          color: const Color.fromARGB(255, 54, 191, 121),
-        ),
-        const Text(
-          'EDIT TASK',
-          style: TextStyle(
-            fontSize: 32,
-            color: Color.fromARGB(255, 54, 191, 121),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.close),
+            iconSize: 22,
+            color: selection,
+            padding: EdgeInsets.zero,
           ),
         ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.done_outline),
-          iconSize: 33,
-          color: const Color.fromARGB(255, 54, 191, 121),
+         Text(
+          'edit task',
+          style: TextStyle(
+            fontSize: 27,
+            color: selection,
+            fontFamily: 'suii'
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.done),
+            iconSize: 22,
+            color: selection,
+            padding: EdgeInsets.zero,
+          ),
         ),
       ],
     );

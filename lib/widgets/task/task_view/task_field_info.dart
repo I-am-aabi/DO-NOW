@@ -9,23 +9,27 @@ class FieldInfo extends StatelessWidget {
   final tailing;
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Row(
   
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-               Text(
-                '$heading:',
-                style:  TextStyle(
-                    color: textcolor, fontSize: 20),
-              ),
-               Text(
-                tailing,
-                style:  TextStyle(
-                    color: textcolor, fontSize: 20),
-              )
-            ],
-      
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                 Text(
+                  '$heading:',
+                  style:  TextStyle(
+                      color: textcolor, fontSize: 20,fontFamily: 'suii'),
+                ),
+                 Text(
+                  tailing,
+                  style:  TextStyle(
+                      color: textcolor, fontSize: 20,fontFamily: 'suii'),
+                )
+              ],
+        
+      ),
     );
   }
 }

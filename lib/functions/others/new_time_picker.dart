@@ -6,7 +6,6 @@ Future<String> picktime(BuildContext context) async {
       await showTimePicker(context: context, initialTime: TimeOfDay.now());
   if (result != null) {
     _selectedTime = result.format(context);
-    print(_selectedTime);
     return _selectedTime;
   } else {
     return '';

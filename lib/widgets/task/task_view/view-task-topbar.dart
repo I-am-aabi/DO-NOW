@@ -13,28 +13,37 @@ class ViewTaskTopbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            tapEditTask(context);
-          },
-          icon: const Icon(Icons.edit),
-          iconSize: 25,
-          color: topbar,
-        ),
-         Text(
-          'VIEW TASK',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              tapEditTask(context,index);
+            },
+            icon: const Icon(Icons.edit),
+            iconSize: 22,
             color: selection,
+            padding: EdgeInsets.zero,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            deleteTask(index, context);
-          },
-          icon: const Icon(Icons.delete),
-          iconSize: 25,
-          color: topbar,
+         Text(
+          'view tasks',
+          style: TextStyle(
+            fontSize: 27,
+            color: selection,
+            fontFamily: 'suii'
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              deleteTask(index, context);
+            },
+            icon: const Icon(Icons.delete),
+            iconSize: 22,
+            color: selection,
+            padding: EdgeInsets.zero,
+          ),
         ),
       ],
     );
