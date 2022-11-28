@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_categories.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_image.dart';
-import 'package:project1/widgets/other/date_field.dart';
-import 'package:project1/widgets/other/textfield.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/status_categories.dart';
 
 class EditEventField extends StatefulWidget {
@@ -43,7 +41,7 @@ class _EditEventField extends State<EditEventField> {
             const SizedBox(
               height: 10,
             ),
-            const CategoriesStatus(),
+            //  CategoriesStatus(initail: ,),
             
             const EventImage(),
             

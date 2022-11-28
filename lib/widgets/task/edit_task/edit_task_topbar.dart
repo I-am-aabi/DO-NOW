@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/task/task_edit.dart';
 import 'package:project1/utilities.dart';
 
 class EditTaskTopbar extends StatelessWidget {
-  const EditTaskTopbar({super.key});
-
+  const EditTaskTopbar({super.key, required this.index});
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,18 +23,16 @@ class EditTaskTopbar extends StatelessWidget {
             padding: EdgeInsets.zero,
           ),
         ),
-         Text(
+        Text(
           'edit task',
-          style: TextStyle(
-            fontSize: 27,
-            color: selection,
-            fontFamily: 'suii'
-          ),
+          style: TextStyle(fontSize: 27, color: selection, fontFamily: 'suii'),
         ),
         SizedBox(
           height: 25,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              onTaskEdit(context, index);
+            },
             icon: const Icon(Icons.done),
             iconSize: 22,
             color: selection,

@@ -17,7 +17,7 @@ class EditTask extends StatelessWidget {
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(
           children:  [
-            const EditTaskTopbar(),
+            EditTaskTopbar(index: index),
             const SizedBox(
               height: 30,
             ),

@@ -6,10 +6,10 @@ import 'package:project1/utilities.dart';
 
 // ignore: must_be_immutable
 class TimeField extends StatelessWidget {
-  TimeField({super.key});
+  TimeField({super.key, required this.timecontroller});
   // ignore: non_constant_identifier_names
   String Time = '';
-  final timecontroller = TextEditingController();
+  final TextEditingController  timecontroller;
   @override
   Widget build(BuildContext context) {
     return TextField(

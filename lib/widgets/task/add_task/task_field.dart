@@ -12,6 +12,7 @@ import 'package:project1/widgets/task/add_task/categories_task.dart';
 var _descriptioncontroller = TextEditingController();
 var _locationcontroller = TextEditingController();
 final _datecontroller = TextEditingController();
+final _timecontroller = TextEditingController();
 
 class TaskField extends StatelessWidget {
   TaskField({
@@ -23,11 +24,11 @@ class TaskField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: container,
-          borderRadius: const BorderRadius.all(Radius.circular(25)),
-          // border: Border.all(
-          //     color: const Color.fromARGB(255, 54, 191, 121), width: 2)
-          ),
+        color: container,
+        borderRadius: const BorderRadius.all(Radius.circular(25)),
+        // border: Border.all(
+        //     color: const Color.fromARGB(255, 54, 191, 121), width: 2)
+      ),
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -35,25 +36,32 @@ class TaskField extends StatelessWidget {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             MyTextField(
-                hint: 'Description', fieldcontroller: _descriptioncontroller,fieldiconData: Icons.subject),
+                hint: 'Description',
+                fieldcontroller: _descriptioncontroller,
+                fieldiconData: Icons.subject),
             const SizedBox(
               height: 10,
             ),
-            MyTextField(hint: 'Location', fieldcontroller: _locationcontroller,fieldiconData: Icons.location_on),
+            MyTextField(
+                hint: 'Location',
+                fieldcontroller: _locationcontroller,
+                fieldiconData: Icons.location_on),
             const SizedBox(
               height: 10,
             ),
             Row(
               children: [
                 Expanded(child: DateField(datecontroller: _datecontroller)),
-                const SizedBox(width: 5,),
-                Expanded(child: TimeField())
+                const SizedBox(
+                  width: 5,
+                ),
+                Expanded(child: TimeField(timecontroller: _timecontroller,))
               ],
             ),
             const SizedBox(
               height: 10,
             ),
-            const CategoriesTask(),
+              CategoriesTask(intial: 'Category'),
             const SizedBox(
               height: 10,
             ),

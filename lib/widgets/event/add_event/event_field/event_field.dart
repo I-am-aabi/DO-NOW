@@ -7,12 +7,13 @@ import 'package:project1/widgets/other/date_field.dart';
 import 'package:project1/widgets/other/textfield.dart';
 import 'package:project1/widgets/other/time_field.dart';
 
-  var _eventdescription = TextEditingController();
-  var _eventlocation = TextEditingController();
-  final _evendate = TextEditingController();
+var _eventdescription = TextEditingController();
+var _eventlocation = TextEditingController();
+final _evendate = TextEditingController();
+final _eventtime = TextEditingController();
+
 class EventField extends StatelessWidget {
   EventField({super.key});
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class EventField extends StatelessWidget {
             Row(
               children: [
                 Expanded(child: DateField(datecontroller: _evendate)),
-                Expanded(child: TimeField())
+                Expanded(child: TimeField(timecontroller: _eventtime,))
               ],
             ),
 
