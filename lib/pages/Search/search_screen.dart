@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/Search/Search_results.dart';
 import 'package:project1/widgets/Search/search_field.dart';
 
@@ -12,18 +13,26 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            backgroundColor: Colors.black,
+            backgroundColor: background,
             body: Padding(
               padding: const EdgeInsets.all(30.0),
-              child: Column(
-                children: const [
-                  SearchField(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Expanded(child: SearchResult()),
+              child: ListView(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(onPressed: (() {
+                    
+                  }), icon: const Icon(Icons.arrow_back),
+                  color: selection,),
+                  SizedBox(width: 30,),
+                  Expanded(child: SearchField())
+
                 ],
-              ),
+              )
+            
+            ],
+          ),
             )));
   }
 }

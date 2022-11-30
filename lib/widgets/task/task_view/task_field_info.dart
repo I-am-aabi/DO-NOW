@@ -26,7 +26,7 @@ class FieldInfo extends StatelessWidget {
                   tailing,
                   style:  TextStyle(
                       color: textcolor, fontSize: 20,fontFamily: 'suii'),
-                )
+                               )
               ],
         
       ),

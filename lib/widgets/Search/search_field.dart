@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:project1/utilities.dart';
 
 class SearchField extends StatelessWidget {
   const SearchField({super.key});
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: TextStyle(color: Color.fromARGB(255, 54, 191, 121)),
+      style: TextStyle(color: background),
         decoration: InputDecoration(
-                hintText: 'Search',
+                hintText: 'search',
                 hintStyle:
-                    const TextStyle(color: Color.fromARGB(100, 123, 220, 126)),
+                    const TextStyle(color: Color.fromARGB(99, 49, 58, 50)),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(
-                    color: Color.fromARGB(255, 73, 198, 133),
+                  borderSide:  BorderSide(
+                    color: selection,
                     width: 1.0,
                   ),
                 ),
                 suffixIcon: const Icon(Icons.search),
-                suffixIconColor: Colors.green,
+                suffixIconColor: selection,
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
-                  borderSide: const BorderSide(
-                    color: Color.fromARGB(255, 67, 173, 70),
+                  borderSide:  BorderSide(
+                    color: selection,
                     width: 1.0,
                   ),
                 ),
