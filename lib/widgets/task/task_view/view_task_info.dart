@@ -66,6 +66,10 @@ class ViewTaskInfo extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
+               FieldInfo(
+                heading: 'id',
+                tailing: task?.dateid,
+              ),
               IconButton(
                 onPressed: () {
                   Navigator.pop(context);

@@ -32,7 +32,7 @@ class Event extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
                 height: 150,
                 width: 220,
                 child: ClipRRect(

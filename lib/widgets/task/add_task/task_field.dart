@@ -55,13 +55,16 @@ class TaskField extends StatelessWidget {
                 const SizedBox(
                   width: 5,
                 ),
-                Expanded(child: TimeField(timecontroller: _timecontroller,))
+                Expanded(
+                    child: TimeField(
+                  timecontroller: _timecontroller,
+                ))
               ],
             ),
             const SizedBox(
               height: 10,
             ),
-              CategoriesTask(intial: 'Category'),
+            CategoriesTask(intial: 'Category'),
             const SizedBox(
               height: 10,
             ),
@@ -73,8 +76,11 @@ class TaskField extends StatelessWidget {
 
   onAddTask() {
     elements[0] = _descriptioncontroller.text.trim();
-
     elements[1] = _locationcontroller.text.trim();
+    _descriptioncontroller.clear();
+    _locationcontroller.clear();
+    _datecontroller.clear();
+    _timecontroller.clear();
     // print(elements[1]);
   }
 }

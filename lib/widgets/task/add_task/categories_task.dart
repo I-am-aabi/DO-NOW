@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/utilities.dart';
@@ -26,7 +28,7 @@ class _CategoriesTaskState extends State<CategoriesTask> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Category:'),
+            const Text('category:'),
             const SizedBox(
               width: 5,
             ),

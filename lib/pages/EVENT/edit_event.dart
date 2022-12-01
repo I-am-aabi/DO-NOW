@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/Models/event_model/event_data_model.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/event/edit_event/edit_event_fields/edit_event_field.dart';
 import 'package:project1/widgets/event/edit_event/edit_event_toopbar.dart';
 
 class EditEvent extends StatelessWidget {
-  const EditEvent({super.key});
-
+  const EditEvent({super.key,required this.event, required this.index});
+  final eventModel? event;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: background,
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(
-          children: const [
-            EditEventTopbar(),
-            SizedBox(
+          children:  [
+             EditEventTopbar(index: index),
+            const SizedBox(
               height: 20,
             ),
-            Expanded(child: EditEventField()),
+            Expanded(child: EditEventField(event: event,)),
           ],
         ),
       ),

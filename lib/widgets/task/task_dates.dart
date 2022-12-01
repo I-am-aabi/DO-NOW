@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/add_task.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_date_creat.dart';
+
 class taskDates extends StatelessWidget {
   const taskDates({super.key});
 
@@ -16,10 +17,12 @@ class taskDates extends StatelessWidget {
             valueListenable: taskListNotifier,
             builder: (BuildContext ctx2, taskList, Widget? child) {
               return ListView.separated(
-                scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.horizontal,
                   itemBuilder: (ctx3, index) {
                     final data = taskList[index];
-                    return TaskDateCreater(id: data.id,);
+                    return TaskDateCreater(
+                      dateid: data.dateid,
+                    );
                   },
                   separatorBuilder: ((ctx3, index) {
                     return const SizedBox(

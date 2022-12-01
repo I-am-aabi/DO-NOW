@@ -12,13 +12,15 @@ onTaskEdit(context, keyvalue) async {
   const EditTaskField().onEditTask();
   final taskDB = await Hive.openBox<TaskModel>('task_DB');
   String id = getId(elements[2], elements[3]);
+  String dateid = id.substring(0, 8);
   final edited = TaskModel(elements[6],
       discription: elements[0],
       location: elements[1],
       date: elements[2],
       category: elements[4],
       time: elements[3],
-      id: id);
+      id: id,
+      dateid: dateid);
 
   taskDB.put(keyvalue, edited);
   // taskListNotifier.value.add(edited);

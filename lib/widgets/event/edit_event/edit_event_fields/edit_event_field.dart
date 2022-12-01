@@ -1,57 +1,92 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/Models/event_model/event_data_model.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
+import 'package:project1/utilities.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_categories.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_image.dart';
+import 'package:project1/widgets/other/date_field.dart';
+import 'package:project1/widgets/other/textfield.dart';
+import 'package:project1/widgets/other/time_field.dart';
 import 'package:project1/widgets/task/edit_task/edit_taskfields/status_categories.dart';
 
-class EditEventField extends StatefulWidget {
-  const EditEventField({super.key});
-
-  @override
-  State<EditEventField> createState() => _EditEventField();
-}
-
-class _EditEventField extends State<EditEventField> {
+final _discriptioneditcontroller = TextEditingController();
+final _locationeditcontroller = TextEditingController();
+final _dateeditcontroller = TextEditingController();
+final _timeeditingcontroller = TextEditingController();
+class EditEventField extends StatelessWidget {
+  const EditEventField({super.key, this.event});
+  final eventModel? event;
   @override
   Widget build(BuildContext context) {
+    _discriptioneditcontroller.text = event!.discription;
+    _locationeditcontroller.text = event!.location;
+    _dateeditcontroller.text = event!.date;
+    _timeeditingcontroller.text = event!.time;
     return Container(
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 0, 0, 0),
-          borderRadius: const BorderRadius.all(Radius.circular(25)),
-          border: Border.all(
-              color: const Color.fromARGB(255, 54, 191, 121), width: 2)),
+        color: container,
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
+      ),
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListView(
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            // const MyTextField(hint: 'Chirstmas'),
+            MyTextField(
+              hint: 'Description',
+              fieldcontroller: _discriptioneditcontroller,
+              fieldiconData: Icons.subject,
+              initial: event?.discription,
+            ),
             const SizedBox(
               height: 10,
             ),
-            // const MyTextField(hint: 'Party hall'),
+            MyTextField(
+              hint: 'Location',
+              fieldcontroller: _locationeditcontroller,
+              fieldiconData: Icons.location_on,
+              initial: event?.location,
+            ),
             const SizedBox(
               height: 10,
             ),
-            //  DateField(),
+            Row(
+              children: [
+                Expanded(child: DateField(datecontroller: _dateeditcontroller)),
+                const SizedBox(
+                  width: 5,
+                ),
+                Expanded(
+                    child: TimeField(
+                  timecontroller: _timeeditingcontroller,
+                ))
+              ],
+            ),
             const SizedBox(
               height: 10,
             ),
-            const CategoriesEvent(),
+            CategoriesEvent(initial: event?.category),
             const SizedBox(
               height: 10,
             ),
-            //  CategoriesStatus(initail: ,),
-            
-            const EventImage(),
-            
-
-           
-           
-            // print('called'),
+            CategoriesStatus(
+              initail: event!.status,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            EventImage(flag: true, imagepath: event?.path),
           ],
         ),
       ),
     );
+  }
+  onEditevent() {
+    elements[0] = _discriptioneditcontroller.text;
+    elements[1] = _locationeditcontroller.text;
+    _dateeditcontroller.clear();
+    _locationeditcontroller.clear();
+    _discriptioneditcontroller.clear();
+    _timeeditingcontroller.clear();
   }
 }

@@ -33,7 +33,7 @@ class AllEvents extends StatelessWidget {
                       );
                     }),
                     separatorBuilder: ((ctx1, index) {
-                      return Divider();
+                      return const Divider();
                     }),
                     itemCount: evenList.length);
               }))),

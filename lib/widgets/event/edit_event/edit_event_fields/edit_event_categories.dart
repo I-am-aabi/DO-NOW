@@ -25,7 +25,7 @@ class _CategoriesEditEvent extends State<CategoriesEditEvent> {
             dropdownColor: const Color.fromARGB(255, 13, 33, 15),
             // ignore: unnecessary_null_comparison
             hint: _dropDownValue == null
-                ? const Text('Categories')
+                ? const Text('categories')
                 : Text(
                     _dropDownValue,
                     style: const TextStyle(color: Color.fromARGB(255, 69, 179, 75)),
@@ -33,7 +33,7 @@ class _CategoriesEditEvent extends State<CategoriesEditEvent> {
             isExpanded: true,
             iconSize: 30.0,
             style: const TextStyle(color: Color.fromARGB(255, 78, 190, 86)),
-            items: ['Work', 'Family', 'Cultural'].map(
+            items: ['work', 'family', 'cultural'].map(
               (val) {
                 return DropdownMenuItem<String>(
                   value: val,

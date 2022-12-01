@@ -52,12 +52,12 @@ class EventField extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const CategoriesEvent(),
+             CategoriesEvent(initial: 'category'),
             const SizedBox(
               height: 10,
             ),
 
-            const EventImage(),
+             EventImage(flag: false),
 
             // print('called'),
           ],

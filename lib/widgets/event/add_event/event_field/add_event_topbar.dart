@@ -12,29 +12,38 @@ class AddEventTopbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.cancel),
-          iconSize: 25,
-          color: topbar,
-        ),
-        Text(
-          'ADD EVENTS',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.cancel),
+            iconSize: 22,
             color: selection,
+            padding: EdgeInsets.zero,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            EventField().onAddevent();
-            eventAdder(context);
-          },
-          icon: const Icon(Icons.done_outline),
-          iconSize: 25,
-          color: topbar,
+        Text(
+          'add event',
+          style: TextStyle(
+            fontSize: 27,
+            color: selection,
+            fontFamily: 'suii'
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              EventField().onAddevent();
+              eventAdder(context);
+            },
+            icon: const Icon(Icons.done_outline),
+            iconSize: 22,
+            color: selection,
+            padding: EdgeInsets.zero,
+          ),
         ),
       ],
     );

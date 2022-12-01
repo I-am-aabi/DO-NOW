@@ -13,28 +13,37 @@ class ViewEventTopbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            tapEditEvent(context);
-          },
-          icon: const Icon(Icons.edit),
-          iconSize: 25,
-          color: topbar,
-        ),
-        Text(
-          'VIEW EVENT',
-          style: TextStyle(
-            fontSize: 32,
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              tapEditEvent(context,index);
+            },
+            icon: const Icon(Icons.edit),
+            iconSize: 22,
             color: selection,
+            padding: EdgeInsets.zero,
           ),
         ),
-        IconButton(
-          onPressed: () {
-            eventDelete(context, index);
-          },
-          icon: const Icon(Icons.delete),
-          iconSize: 25,
-          color: topbar,
+        Text(
+          'view event',
+          style: TextStyle(
+            fontSize: 27,
+            color: selection,
+            fontFamily: 'suii'
+          ),
+        ),
+        SizedBox(
+          height: 25,
+          child: IconButton(
+            onPressed: () {
+              eventDelete(context, index);
+            },
+            icon: const Icon(Icons.delete),
+            iconSize: 22,
+            color: selection,
+            padding: EdgeInsets.zero,
+          ),
         ),
       ],
     );
