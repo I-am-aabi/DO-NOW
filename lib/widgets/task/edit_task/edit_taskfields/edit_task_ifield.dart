@@ -78,10 +78,8 @@ class EditTaskField extends StatelessWidget {
     );
   }
   
-  onEditTask() {
-    
+  onEditTask() { 
     elements[0] = _discriptioneditcontroller.text;
- 
     elements[1] = _locationeditcontroller.text.trim();
   }
 }

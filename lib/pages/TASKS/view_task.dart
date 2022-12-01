@@ -6,9 +6,9 @@ import 'package:project1/widgets/task/task_view/view_task_info.dart';
 import '../../Database/Models/task_model/task_data_model.dart';
 
 class ViewTask extends StatelessWidget {
-  const ViewTask({super.key, required this.task, required this.index});
+  const ViewTask({super.key, required this.task, required this.keyvalue,});
   final TaskModel? task;
-  final int index;
+  final dynamic keyvalue;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +18,7 @@ class ViewTask extends StatelessWidget {
           padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
           child: Column(
             children: [
-               ViewTaskTopbar(index: index),
+              ViewTaskTopbar(keyvalue: keyvalue),
               const SizedBox(
                 height: 30,
               ),

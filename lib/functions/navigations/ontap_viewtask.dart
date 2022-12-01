@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_selector.dart';
+import 'package:project1/functions/others/get_index.dart';
 import 'package:project1/pages/TASKS/view_task.dart';
 
-void tapviewTask(context, index) async {
-final task = await getTask(index);
+void tapviewTask(context, id) async {
+  final task = await getTask(id);
+  dynamic Keyvalue =await getIndex(id);
   Navigator.of(context).push(MaterialPageRoute(
       builder: (ctx) => ViewTask(
-            task: task,index: index,
+            task: task,
+            keyvalue: Keyvalue,
           )));
 }

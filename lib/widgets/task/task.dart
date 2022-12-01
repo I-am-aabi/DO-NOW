@@ -9,18 +9,17 @@ class Task extends StatelessWidget {
       required this.discription,
       required this.date,
       required this.time,
-      required this.index,
-      required this.category});
+      required this.category, required this.id});
   final String discription;
   final String date;
   final String time;
-  final int index;
+  final String id;
   final String category;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        tapviewTask(context, index);
+        tapviewTask(context, id);
       },
       child: Padding(
         padding: const EdgeInsets.all(10.0),

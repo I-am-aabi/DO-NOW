@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_adder.dart';
 import 'package:project1/utilities.dart';
@@ -39,7 +40,7 @@ class AddTaskTopbar extends StatelessWidget {
             onPressed: () {
               TaskField().onAddTask();
               taskAdder();
-              Navigator.pop(context);
+                Navigator.pop(context);
             },
             padding: const EdgeInsets.all(0),
             icon: const Icon(Icons.done),

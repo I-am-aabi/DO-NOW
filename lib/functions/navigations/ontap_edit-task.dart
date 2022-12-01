@@ -1,12 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:project1/Database/functions/task/task_selector.dart';
-import 'package:project1/pages/TASKS/edit_task.dart';
-import 'package:project1/pages/TASKS/view_task.dart';
 
-void tapEditTask(context, index) async {
-final task = await getTask(index);
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:project1/Database/Models/task_model/task_data_model.dart';
+import 'package:project1/pages/TASKS/edit_task.dart';
+
+void tapEditTask(context, keyvalue) async {
+  final taskDB = await Hive.openBox<TaskModel>('task_DB');
+  final task = taskDB.get(keyvalue);
   Navigator.of(context).push(MaterialPageRoute(
       builder: (ctx) => EditTask(
-            task:task,index: index,
+            task: task,
+            keyvalue: keyvalue,
           )));
 }

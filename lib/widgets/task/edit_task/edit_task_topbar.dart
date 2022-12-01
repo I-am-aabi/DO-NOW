@@ -3,8 +3,8 @@ import 'package:project1/Database/functions/task/task_edit.dart';
 import 'package:project1/utilities.dart';
 
 class EditTaskTopbar extends StatelessWidget {
-  const EditTaskTopbar({super.key, required this.index});
-  final int index;
+  const EditTaskTopbar({super.key, this.keyvalue,});
+  final dynamic keyvalue;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -31,7 +31,7 @@ class EditTaskTopbar extends StatelessWidget {
           height: 25,
           child: IconButton(
             onPressed: () {
-              onTaskEdit(context, index);
+              onTaskEdit(context, keyvalue);
             },
             icon: const Icon(Icons.done),
             iconSize: 22,
