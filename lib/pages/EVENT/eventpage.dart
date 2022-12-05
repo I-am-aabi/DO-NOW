@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/event/get_all_event.dart';
 import 'package:project1/utilities.dart';
-import 'package:project1/widgets/event/add_event/event_field/add_event_topbar.dart';
 import 'package:project1/widgets/event/all_events.dart';
 import 'package:project1/widgets/event/event_top_bar.dart';
 

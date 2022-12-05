@@ -3,7 +3,6 @@ import 'package:project1/utilities.dart';
 import 'package:project1/widgets/event/add_event/event_field/add_event_topbar.dart';
 import 'package:project1/widgets/event/add_event/event_field/event_field.dart';
 
-
 class AddEvent extends StatelessWidget {
   const AddEvent({super.key});
 
@@ -24,13 +23,10 @@ class AddEvent extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              
             ],
           ),
         ),
-        
       ),
     );
-    
   }
 }

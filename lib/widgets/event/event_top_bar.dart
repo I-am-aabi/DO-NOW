@@ -40,7 +40,7 @@ class EventTopBar extends StatelessWidget {
               tapEventFilter(context);
             },
             padding: const EdgeInsets.all(0),
-            icon: const Icon(Icons.filter_alt_outlined),
+            icon: const Icon(Icons.search),
             iconSize: 22,
             color: selection,
           ),

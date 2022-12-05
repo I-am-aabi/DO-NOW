@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/get_all_task.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/alltasks.dart';
-import 'package:project1/widgets/task/task_dates.dart';
 import 'package:project1/widgets/task/tasktopbar.dart';
 
 class TaskScreen extends StatelessWidget {
@@ -22,10 +21,10 @@ class TaskScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              taskDates(),
-              SizedBox(
-                height: 15,
-              ),
+              // taskDates(),
+              // SizedBox(
+              //   height: 15,
+              // ),
               Expanded(child: AllTasks()),
               SizedBox(
                 height: 20,
