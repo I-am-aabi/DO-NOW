@@ -8,17 +8,18 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ValueNotifier<String> _searchNotifier = ValueNotifier('');
     return SafeArea(
       child: Scaffold(
         backgroundColor: background,
         body: Column(
-          children:  const [
-            Searchtopbar(),
-            Expanded(child: SearchResult()),
+          children: [
+            Searchtopbar(searchNotifier: _searchNotifier),
+            
+            Expanded(child: SearchResult(searchNotifier: _searchNotifier,)),
           ],
         ),
       ),
     );
   }
-  
 }

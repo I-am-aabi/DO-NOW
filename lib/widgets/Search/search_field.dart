@@ -2,15 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/Search/Search_results.dart';
 
-class SearchField extends StatefulWidget {
-  SearchField({super.key});
+class SearchField extends StatelessWidget {
+  SearchField({super.key, required this.searchNotifier});
 
-  @override
-  State<SearchField> createState() => _SearchFieldState();
-}
-
-class _SearchFieldState extends State<SearchField> {
   final _searchController = TextEditingController();
+
+  final ValueNotifier searchNotifier;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +17,10 @@ class _SearchFieldState extends State<SearchField> {
         child: TextField(
           controller: _searchController,
           textAlign: TextAlign.start,
-          style: TextStyle(color: background),
+          style: TextStyle(color: textcolor,fontFamily: 'suii'),
           onChanged: (value) {
-            
+            searchNotifier.value = value;
+            searchNotifier.notifyListeners();
           },
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.only(top: 5, left: 12),

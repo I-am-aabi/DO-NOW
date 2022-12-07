@@ -9,7 +9,5 @@ Future<void> addTask(TaskModel value) async {
   final taskDB = await Hive.openBox<TaskModel>('task_db');
   taskDB.add(value);
   taskListNotifier.value.add(value);
-  // dateListNotifier.value.add(datelist);
-  // dateListNotifier.notifyListeners();
   taskListNotifier.notifyListeners();
 }

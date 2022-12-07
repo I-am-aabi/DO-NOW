@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addevent.dart';
-import 'package:project1/functions/navigations/ontap_filter_event.dart';
+
 import 'package:project1/utilities.dart';
 
 class EventTopBar extends StatelessWidget {
@@ -37,7 +37,7 @@ class EventTopBar extends StatelessWidget {
           height: 25,
           child: IconButton(
             onPressed: () {
-              tapEventFilter(context);
+      
             },
             padding: const EdgeInsets.all(0),
             icon: const Icon(Icons.search),
