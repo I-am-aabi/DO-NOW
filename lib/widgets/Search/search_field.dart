@@ -1,19 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
+import 'package:project1/widgets/Search/Search_results.dart';
 
-class SearchField extends StatelessWidget {
-  const SearchField({super.key});
+class SearchField extends StatefulWidget {
+  SearchField({super.key});
+
+  @override
+  State<SearchField> createState() => _SearchFieldState();
+}
+
+class _SearchFieldState extends State<SearchField> {
+  final _searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
       child: Center(
         child: TextField(
-          
+          controller: _searchController,
           textAlign: TextAlign.start,
           style: TextStyle(color: background),
+          onChanged: (value) {
+            
+          },
           decoration: InputDecoration(
-            contentPadding: const EdgeInsets.only(top: 5,left: 12),
+            contentPadding: const EdgeInsets.only(top: 5, left: 12),
             hintText: 'search',
             hintStyle: const TextStyle(
                 color: Color.fromARGB(99, 49, 58, 50), fontSize: 20),

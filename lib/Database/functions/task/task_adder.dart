@@ -2,11 +2,10 @@ import 'package:project1/Database/Models/task_model/task_data_model.dart';
 import 'package:project1/Database/functions/task/add_task.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/get_id.dart';
-import 'package:project1/widgets/task/task_date_creat.dart';
+
 
 taskAdder() async {
   String id = getId(elements[2], elements[3]);
-  print('nowid$id');
   String dateid = id.substring(0, 8);
   // print(id);
   var _task = TaskModel('upcoming',
