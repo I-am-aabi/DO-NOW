@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addevent.dart';
+import 'package:project1/functions/others/notification.dart';
 
 import 'package:project1/utilities.dart';
 
@@ -24,20 +25,19 @@ class EventTopBar extends StatelessWidget {
             color: selection,
           ),
         ),
-         Text(
+        Text(
           'events',
           style: TextStyle(
-            fontSize: 27,
-            color: selection,
-            fontFamily: 'suii',
-            fontWeight: FontWeight.w300
-          ),
+              fontSize: 27,
+              color: selection,
+              fontFamily: 'suii',
+              fontWeight: FontWeight.w300),
         ),
         SizedBox(
           height: 25,
           child: IconButton(
             onPressed: () {
-      
+              notify();
             },
             padding: const EdgeInsets.all(0),
             icon: const Icon(Icons.search),

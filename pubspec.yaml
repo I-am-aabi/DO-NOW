@@ -47,6 +47,9 @@ dependencies:
   date_time_picker: ^2.1.0
   molten_navigationbar_flutter: ^1.0.1
   pandabar: ^0.1.2
+  awesome: ^0.0.3
+  notifications: ^2.0.1
+  awesome_notifications: ^0.7.4+1
 
 dev_dependencies:
   flutter_test:

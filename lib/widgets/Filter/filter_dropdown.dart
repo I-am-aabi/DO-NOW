@@ -55,15 +55,15 @@ Future<void> showFilter(BuildContext context,ValueNotifier notifier) {
                   fontSize: 25
                 ),),
               ),
-              //  Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   crossAxisAlignment: CrossAxisAlignment.center,
-              //    children:  [
-              //      MyFilterChip(label: 'family', filter: '',notifier: notifier),
-              //      MyFilterChip(label: 'cultural', filter: 'upcoming',notifier: notifier),
-              //      MyFilterChip(label: 'friends', filter: 'pending',notifier: notifier),
-              //    ],
-              //  )
+               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                 children:  [
+                   MyFilterChip(label: 'family', index: 6,notifier: notifier),
+                   MyFilterChip(label: 'cultural', index: 7,notifier: notifier),
+                   MyFilterChip(label: 'work',index: 8,notifier: notifier),
+                 ],
+               )
               ],
             ),
           ),

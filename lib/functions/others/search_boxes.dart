@@ -22,3 +22,4 @@ filterclear() {
 }
 
 bool state = false;
+bool select = false;

@@ -1,3 +1,4 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:project1/Database/Models/date_model/date_data_mode.dart';
@@ -17,6 +18,34 @@ Future<void> main() async {
   if (!Hive.isAdapterRegistered(DATAMODEAdapter().typeId)) {
     Hive.registerAdapter(DATAMODEAdapter());
   }
+  WidgetsFlutterBinding.ensureInitialized();
+ await  AwesomeNotifications().initialize(
+      null,
+      [
+        NotificationChannel(
+            channelGroupKey: 'basic_channel_group',
+            channelKey: 'key1',
+            channelName: 'Basic notifications',
+            channelDescription: 'Notification channel for basic tests',
+            defaultColor: const Color(0xFF9D50DD),
+            ledColor: Colors.white,
+            enableVibration: true,
+            importance: NotificationImportance.Max)
+      ],
+      // Channel groups are only visual and are not required
+      channelGroups: [
+        NotificationChannelGroup(
+            channelGroupKey: 'basic_channel_group',
+            channelGroupName: 'Basic group')
+      ],
+      debug: true
+  );
+   AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+      if (!isAllowed) {
+        AwesomeNotifications().requestPermissionToSendNotifications();
+      }
+    });
+  
   runApp(const MyApp());
 }
 

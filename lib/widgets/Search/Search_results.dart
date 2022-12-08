@@ -1,6 +1,9 @@
 // ignore: file_names
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:project1/widgets/event/event.dart';
 import 'package:project1/widgets/task/task.dart';
 
 import '../../Database/Models/task_model/task_data_model.dart';
@@ -43,22 +46,64 @@ class SearchResult extends StatelessWidget {
                           .toLowerCase()
                           .contains(categoryvalues[5].toLowerCase()))
                   .toList();
+              displayEvent = eventBoxList
+                  .where((element) =>
+                      element.discription
+                          .toLowerCase()
+                          .contains(value.toLowerCase()) &&
+                      element.category
+                          .toLowerCase()
+                          .contains(categoryvalues[0].toLowerCase()) &&
+                      element.category
+                          .toLowerCase()
+                          .contains(categoryvalues[1].toLowerCase()) &&
+                      element.category
+                          .toLowerCase()
+                          .contains(categoryvalues[2].toLowerCase()) &&
+                      element.status
+                          .toLowerCase()
+                          .contains(categoryvalues[6].toLowerCase()) &&
+                      element.status
+                          .toLowerCase()
+                          .contains(categoryvalues[7].toLowerCase()) &&
+                      element.status
+                          .toLowerCase()
+                          .contains(categoryvalues[8].toLowerCase()))
+                  .toList();
 
-              return ListView.separated(
-                  itemBuilder: ((context, index) {
-                    return Task(
-                        discription: displayTask[index].discription,
-                        date: displayTask[index].date,
-                        time: displayTask[index].time,
-                        category: displayTask[index].category,
-                        id: displayTask[index].id);
-                  }),
-                  separatorBuilder: ((context, index) {
-                    return const SizedBox(
-                      height: 10,
-                    );
-                  }),
-                  itemCount: displayTask.length);
+              if (select == true) {
+                return ListView.separated(
+                    itemBuilder: ((context, index) {
+                      return Task(
+                          discription: displayTask[index].discription,
+                          date: displayTask[index].date,
+                          time: displayTask[index].time,
+                          category: displayTask[index].category,
+                          id: displayTask[index].id);
+                    }),
+                    separatorBuilder: ((context, index) {
+                      return const SizedBox(
+                        height: 10,
+                      );
+                    }),
+                    itemCount: displayTask.length);
+              } else {
+                return ListView.separated(
+                    itemBuilder: ((context, index) {
+                      return Event(
+                          discription: displayEvent[index].discription,
+                          date: displayEvent[index].date,
+                          time: displayEvent[index].time,
+                          path: displayEvent[index].path,
+                          index: index);
+                    }),
+                    separatorBuilder: ((context, index) {
+                      return const SizedBox(
+                        height: 10,
+                      );
+                    }),
+                    itemCount: displayEvent.length);
+              }
             })));
   }
 }
