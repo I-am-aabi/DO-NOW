@@ -68,7 +68,7 @@ class ViewTaskInfo extends StatelessWidget {
               ),
                FieldInfo(
                 heading: 'id',
-                tailing: task?.dateid,
+                tailing: task?.id,
               ),
               IconButton(
                 onPressed: () {

@@ -9,6 +9,8 @@ List elements = [
   'CATEGORY',
   'PATH',
   'STATUS',
-  'date'
+  'date',
+  '--',
+  '--'
 ];
 List<TaskModel> taskListes = [];
