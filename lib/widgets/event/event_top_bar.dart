@@ -39,7 +39,7 @@ class EventTopBar extends StatelessWidget {
           height: 25,
           child: IconButton(
             onPressed: () {
-              Timer(const Duration(seconds: 30),()=> notify());
+              
             },
             padding: const EdgeInsets.all(0),
             icon: const Icon(Icons.search),

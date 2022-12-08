@@ -10,7 +10,6 @@ onTaskEdit(context, keyvalue) async {
   const EditTaskField().onEditTask();
   final taskDB = await Hive.openBox<TaskModel>('task_DB');
   final task = taskDB.getAt(keyvalue);
-
   String id = task!.id;
   String dateid = task.dateid;
   final edited = TaskModel(elements[6],

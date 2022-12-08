@@ -19,7 +19,7 @@ Future<void> main() async {
     Hive.registerAdapter(DATAMODEAdapter());
   }
   WidgetsFlutterBinding.ensureInitialized();
- await  AwesomeNotifications().initialize(
+  await AwesomeNotifications().initialize(
       null,
       [
         NotificationChannel(
@@ -38,14 +38,13 @@ Future<void> main() async {
             channelGroupKey: 'basic_channel_group',
             channelGroupName: 'Basic group')
       ],
-      debug: true
-  );
-   AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
-      if (!isAllowed) {
-        AwesomeNotifications().requestPermissionToSendNotifications();
-      }
-    });
-  
+      debug: true);
+  AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+    if (!isAllowed) {
+      AwesomeNotifications().requestPermissionToSendNotifications();
+    }
+  });
+
   runApp(const MyApp());
 }
 

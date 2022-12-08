@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:project1/Database/Models/task_model/task_data_model.dart';
 import 'package:project1/Database/functions/task/add_task.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
@@ -15,6 +17,9 @@ taskAdder() async {
       time: elements[3],
       id: id,
       dateid: dateid);
-  setTimer();
-  addTask(_task);
+      addTask(_task);
+Timer tasktimer =  Timer.periodic(const Duration(seconds: 30), (timer) {
+    setTimer(id,timer);
+  });
+ 
 }

@@ -1,23 +1,24 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
 
-notify() {
+notify(String discription,String location) {
   AwesomeNotifications().createNotification(
     
       content: NotificationContent(
           id: 1,
           channelKey: 'key1',
-          title: 'title here',
-          body: 'body here',
+          title:  discription,
+          body: location,
           payload: {"abid": "is here"},
           autoDismissible: false),
       actionButtons: [
         NotificationActionButton(
-          key: "open",
+          key: "completed",
           label: "completed",
         ),
         NotificationActionButton(
-          key: "delete",
+          key: "pending",
           label: "pending",
         )
       ]);
+      
 }
