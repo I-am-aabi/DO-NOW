@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/Filter/filter_topbar.dart';
 import 'package:project1/widgets/Filter/my_filter_chip.dart';
+import 'package:project1/widgets/other/date_range_field.dart';
 
 Future<void> showFilter(BuildContext context,ValueNotifier notifier) {
   return showModalBottomSheet(
@@ -63,6 +64,16 @@ Future<void> showFilter(BuildContext context,ValueNotifier notifier) {
                    MyFilterChip(label: 'cultural', index: 7,notifier: notifier),
                    MyFilterChip(label: 'work',index: 8,notifier: notifier),
                  ],
+               ),
+               Row(
+                children: [Text('Date Range',
+                style: TextStyle(
+                  color: textcolor,
+                  fontFamily: 'suii',
+                  fontSize: 17
+                ),),
+                const SizedBox(width: 10,),
+                Expanded(child: DateRangeSelect())],
                )
               ],
             ),

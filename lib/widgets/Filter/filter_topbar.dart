@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/search_boxes.dart';
 import 'package:project1/utilities.dart';
 
@@ -19,6 +20,8 @@ class FilterTopBar extends StatelessWidget {
               filterclear();
               search.notifyListeners();
               state = false;
+              dateRangeset = DateTimeRange(
+                  start: DateTime.now(), end: DateTime(2022, 12, 25));
             }),
             icon: Icon(
               Icons.close,

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addevent.dart';
+import 'package:project1/functions/navigations/ontap_search.dart';
 import 'package:project1/functions/others/notification.dart';
 
 import 'package:project1/utilities.dart';
@@ -39,7 +40,7 @@ class EventTopBar extends StatelessWidget {
           height: 25,
           child: IconButton(
             onPressed: () {
-              
+               tapSearch(context);
             },
             padding: const EdgeInsets.all(0),
             icon: const Icon(Icons.search),

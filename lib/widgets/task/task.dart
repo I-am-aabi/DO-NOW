@@ -4,6 +4,7 @@ import 'package:project1/functions/others/get_date_info.dart';
 import 'package:project1/functions/others/iconfind.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_dates.dart';
+import '../../Database/functions/task/task_data_collector.dart';
 
 class Task extends StatelessWidget {
   Task(
@@ -94,4 +95,15 @@ class Task extends StatelessWidget {
       ),
     );
   }
+  
+bool dateInfo(String date) {
+  List datelists = datelist;
+  for (int i = 0; i <= datelists.length - 1; i++) {
+    if (date == datelists[i]) {
+      return false;
+    }
+  }
+  datelist.add(date);
+  return true;
+}
 }

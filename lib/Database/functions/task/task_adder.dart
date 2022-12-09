@@ -16,7 +16,8 @@ taskAdder() async {
       category: elements[4],
       time: elements[3],
       id: id,
-      dateid: dateid);
+      dateid: dateid,
+      timedate: dateofelement);
       addTask(_task);
 Timer tasktimer =  Timer.periodic(const Duration(seconds: 30), (timer) {
     setTimer(id,timer);

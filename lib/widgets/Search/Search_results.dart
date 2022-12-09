@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/widgets/event/event.dart';
 import 'package:project1/widgets/task/task.dart';
 
@@ -44,7 +45,10 @@ class SearchResult extends StatelessWidget {
                           .contains(categoryvalues[4].toLowerCase()) &&
                       element.status
                           .toLowerCase()
-                          .contains(categoryvalues[5].toLowerCase()))
+                          .contains(categoryvalues[5].toLowerCase()) &&
+                      element.timedate.isAfter(DateTime(dateRangeset.start.year,
+                          dateRangeset.start.month, dateRangeset.start.day))&&
+                          element.timedate.isBefore(DateTime(dateRangeset.end.year,dateRangeset.end.month,dateRangeset.end.day)))
                   .toList();
               displayEvent = eventBoxList
                   .where((element) =>
@@ -76,7 +80,7 @@ class SearchResult extends StatelessWidget {
                     itemBuilder: ((context, index) {
                       return Task(
                           discription: displayTask[index].discription,
-                          date: displayTask[index].date,
+                          date: displayTask[index].date.toString(),
                           time: displayTask[index].time,
                           category: displayTask[index].category,
                           id: displayTask[index].id);

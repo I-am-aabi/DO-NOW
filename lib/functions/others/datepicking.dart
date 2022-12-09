@@ -13,6 +13,7 @@ Future<String> pickDate(context) async {
     String selectedDate = DateFormat('dd MMM yyyy').format(pickedDate);
     String dateforid = DateFormat('dd MM yyyy').format(pickedDate);
     elements[8] = dateforid;
+    dateofelement = pickedDate;
     return selectedDate;
   } else {
     return 'no date picked';

@@ -11,6 +11,10 @@ List elements = [
   'STATUS',
   'date',
   '--',
-  '--'
+  '--',
 ];
 List<TaskModel> taskListes = [];
+DateTime dateofelement = DateTime.now();
+ DateTimeRange dateRangeset =
+    DateTimeRange(start: DateTime.now(), end: DateTime(2022, 12, 25));
+    List datelist = [];

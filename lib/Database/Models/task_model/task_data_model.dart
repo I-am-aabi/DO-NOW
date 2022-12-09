@@ -26,11 +26,17 @@ class TaskModel {
 
   @HiveField(7)
   final String dateid;
+
+  @HiveField(8)
+  final DateTime timedate;
+
   TaskModel(this.status,
       {required this.discription,
       required this.location,
       required this.date,
       required this.category,
       required this.time,
-      required this.id,required this.dateid});
+      required this.id,
+      required this.dateid,
+      required  this.timedate});
 }

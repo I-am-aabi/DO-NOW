@@ -19,7 +19,9 @@ onTaskEdit(context, keyvalue) async {
       category: elements[4],
       time: elements[3],
       id: id,
-      dateid: dateid);
+      dateid: dateid,
+      timedate: dateofelement
+      );
 
   taskDB.put(keyvalue, edited);
   // taskListNotifier.value.add(edited);

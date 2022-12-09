@@ -21,7 +21,7 @@ class EditTaskField extends StatelessWidget {
   Widget build(BuildContext context) {
     _discriptioneditcontroller.text = task!.discription;
     _locationeditcontroller.text = task!.location;
-    _dateeditcontroller.text = task!.date;
+    _dateeditcontroller.text = task!.date.toString();
     _timeeditingcontroller.text = task!.time;
     return Container(
       decoration: BoxDecoration(
@@ -67,18 +67,20 @@ class EditTaskField extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-             CategoriesTask(intial: task!.category),
+            CategoriesTask(intial: task!.category),
             const SizedBox(
               height: 10,
             ),
-            CategoriesStatus(initail: task!.status,)
+            CategoriesStatus(
+              initail: task!.status,
+            )
           ],
         ),
       ),
     );
   }
-  
-  onEditTask() { 
+
+  onEditTask() {
     elements[0] = _discriptioneditcontroller.text;
     elements[1] = _locationeditcontroller.text.trim();
   }
