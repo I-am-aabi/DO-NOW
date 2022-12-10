@@ -83,7 +83,9 @@ class SearchResult extends StatelessWidget {
                           date: displayTask[index].date.toString(),
                           time: displayTask[index].time,
                           category: displayTask[index].category,
-                          id: displayTask[index].id);
+                          id: displayTask[index].id,
+                          datestat: false,);
+
                     }),
                     separatorBuilder: ((context, index) {
                       return const SizedBox(

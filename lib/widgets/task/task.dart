@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_viewtask.dart';
-import 'package:project1/functions/others/get_date_info.dart';
 import 'package:project1/functions/others/iconfind.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_dates.dart';
@@ -13,23 +12,22 @@ class Task extends StatelessWidget {
       required this.date,
       required this.time,
       required this.category,
-      required this.id});
+      required this.id,  required this.datestat});
   final String discription;
   final String date;
   final String time;
   final String id;
   final String category;
-  bool _datestat = false;
+  final bool datestat;
   @override
   Widget build(BuildContext context) {
-    _datestat = dateInfo(date);
     return GestureDetector(
       onTap: () {
         tapviewTask(context, id);
       },
       child: Column(
         children: [
-          Visibility(visible: _datestat, child: TaskDate(date: date)),
+          Visibility(visible: datestat, child: TaskDate(date: date)),
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
@@ -95,15 +93,5 @@ class Task extends StatelessWidget {
       ),
     );
   }
-  
-bool dateInfo(String date) {
-  List datelists = datelist;
-  for (int i = 0; i <= datelists.length - 1; i++) {
-    if (date == datelists[i]) {
-      return false;
-    }
-  }
-  datelist.add(date);
-  return true;
-}
+
 }

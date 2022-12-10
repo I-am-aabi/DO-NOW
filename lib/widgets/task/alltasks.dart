@@ -4,6 +4,10 @@ import 'package:project1/Database/functions/task/get_all_task.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task.dart';
 
+import '../../Database/functions/task/task_data_collector.dart';
+
+List datelists = [];
+
 class AllTasks extends StatelessWidget {
   const AllTasks({super.key});
 
@@ -20,20 +24,23 @@ class AllTasks extends StatelessWidget {
         child: ValueListenableBuilder(
           valueListenable: taskListNotifier,
           builder: (BuildContext ctx, taskList, Widget? child) {
+            datelists = [];
             return ListView.separated(
                 itemBuilder: (ctx1, index) {
                   taskList.sort((a, b) => a.id.compareTo(b.id));
                   final data = taskList[index];
+                  bool status = dateInfo(taskList[index].date);
                   return Task(
                     discription: data.discription,
                     date: data.date,
                     time: data.time,
                     id: data.id,
                     category: data.category,
+                    datestat: status,
                   );
                 },
                 separatorBuilder: (ctx1, index) {
-                  return  const Padding(
+                  return const Padding(
                       padding: EdgeInsets.only(left: 20, right: 20),
                       child: SizedBox(
                         height: 5,
@@ -42,5 +49,18 @@ class AllTasks extends StatelessWidget {
                 itemCount: taskList.length);
           },
         ));
+  }
+
+  bool dateInfo(String date) {
+    print(datelists);
+    for (int i = 0; i <= datelists.length - 1; i++) {
+      if (date == datelists[i]) {
+        print('false');
+        return false;
+      }
+    }
+    datelists.add(date);
+    print(true);
+    return true;
   }
 }
