@@ -1,4 +1,4 @@
-package com.example.project1
+package com.donow
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -12,7 +12,18 @@ class TaskTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+        Text(
+          'tasks',
+          style: TextStyle(
+            fontFamily: 'suii',
+            fontWeight: FontWeight.w500,
+            fontSize: 29,
+            color: selection,
+          ),
+        ),
+        Row(
+          children: [
+             SizedBox(
           height: 25,
           child: IconButton(
             padding: const EdgeInsets.all(0),
@@ -24,27 +35,33 @@ class TaskTopBar extends StatelessWidget {
             color: selection,
           ),
         ),
-        Text(
-          'tasks',
-          style: TextStyle(
-            fontFamily: 'suii',
-            fontWeight: FontWeight.w300,
-            fontSize: 27,
-            color: selection,
-          ),
-        ),
-        SizedBox(
+            SizedBox(
+              height: 25,
+              child: IconButton(
+                onPressed: () {
+                  tapSearch(context);
+                },
+                padding: const EdgeInsets.all(0),
+                icon: const Icon(Icons.search),
+                iconSize: 22,
+                color: selection,
+              ),
+            ),
+               SizedBox(
           height: 25,
           child: IconButton(
             onPressed: () {
               tapSearch(context);
             },
             padding: const EdgeInsets.all(0),
-            icon: const Icon(Icons.search),
+            icon: const Icon(Icons.settings),
             iconSize: 22,
             color: selection,
           ),
         ),
+          ],
+        ),
+      
       ],
     );
   }

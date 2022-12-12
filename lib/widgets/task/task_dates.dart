@@ -14,6 +14,7 @@ class TaskDate extends StatelessWidget {
       style: TextStyle(
         color: textcolor,
         fontFamily: 'suii',
+        fontWeight: FontWeight.w100,
         fontSize: 25
       ),)
     );

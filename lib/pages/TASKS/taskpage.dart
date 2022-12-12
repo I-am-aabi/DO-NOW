@@ -21,10 +21,6 @@ class TaskScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              // taskDates(),
-              // SizedBox(
-              //   height: 15,
-              // ),
               Expanded(child: AllTasks()),
               SizedBox(
                 height: 20,

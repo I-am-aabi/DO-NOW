@@ -14,7 +14,18 @@ class EventTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
+       
+        Text(
+          'events',
+          style: TextStyle(
+              fontSize: 29,
+              color: selection,
+              fontFamily: 'suii',
+              fontWeight: FontWeight.w300),
+        ),
+        Row(
+          children: [
+             SizedBox(
           height: 25,
           child: IconButton(
             padding: const EdgeInsets.all(0),
@@ -26,25 +37,31 @@ class EventTopBar extends StatelessWidget {
             color: selection,
           ),
         ),
-        Text(
-          'events',
-          style: TextStyle(
-              fontSize: 27,
-              color: selection,
-              fontFamily: 'suii',
-              fontWeight: FontWeight.w300),
-        ),
-        SizedBox(
-          height: 25,
-          child: IconButton(
-            onPressed: () {
-               tapSearch(context);
-            },
-            padding: const EdgeInsets.all(0),
-            icon: const Icon(Icons.search),
-            iconSize: 22,
-            color: selection,
-          ),
+            SizedBox(
+              height: 25,
+              child: IconButton(
+                onPressed: () {
+                   tapSearch(context);
+                },
+                padding: const EdgeInsets.all(0),
+                icon: const Icon(Icons.search),
+                iconSize: 22,
+                color: selection,
+              ),
+            ),
+              SizedBox(
+              height: 25,
+              child: IconButton(
+                onPressed: () {
+                   tapSearch(context);
+                },
+                padding: const EdgeInsets.all(0),
+                icon: const Icon(Icons.settings),
+                iconSize: 22,
+                color: selection,
+              ),
+            ),
+          ],
         ),
       ],
     );
