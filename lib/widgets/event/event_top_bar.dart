@@ -1,9 +1,7 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addevent.dart';
 import 'package:project1/functions/navigations/ontap_search.dart';
-import 'package:project1/functions/others/notification.dart';
 
 import 'package:project1/utilities.dart';
 

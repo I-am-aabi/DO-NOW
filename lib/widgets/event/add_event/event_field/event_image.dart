@@ -1,17 +1,18 @@
-import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:project1/Database/functions/event/event_data_collector.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/functions/others/image_chooser.dart';
 import 'package:project1/functions/others/image_picker.dart';
 import 'package:project1/utilities.dart';
 
+// ignore: must_be_immutable
 class EventImage extends StatefulWidget {
   EventImage({super.key, required this.flag, this.imagepath});
 
+  // ignore: prefer_typing_uninitialized_variables
   var flag;
+  // ignore: prefer_typing_uninitialized_variables
   var imagepath;
   @override
   State<EventImage> createState() => _EventImageState();

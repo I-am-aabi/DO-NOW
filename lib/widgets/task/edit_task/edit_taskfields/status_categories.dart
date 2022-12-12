@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/utilities.dart';
 
+// ignore: must_be_immutable
 class CategoriesStatus extends StatefulWidget {
   CategoriesStatus({super.key,required this.initail});
+  // ignore: prefer_typing_uninitialized_variables
   var initail;
   @override
   State<CategoriesStatus> createState() => _CategoriesStatus();

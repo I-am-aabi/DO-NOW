@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addtasks.dart';
-import 'package:project1/functions/navigations/ontap_filter.dart';
 import 'package:project1/functions/navigations/ontap_search.dart';
 import 'package:project1/utilities.dart';
 

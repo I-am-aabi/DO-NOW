@@ -17,7 +17,7 @@ class _MyRadioState extends State<MyRadio> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         FilterChip(
-          label: Text('task'),
+          label: const Text('task'),
           onSelected: (bool value) {
             setState(() {
               select = true;
@@ -29,7 +29,7 @@ class _MyRadioState extends State<MyRadio> {
           selectedColor: container,
         ),
         FilterChip(
-          label: Text('event'),
+          label: const Text('event'),
           onSelected: (bool value) {
             setState(() {
               select = false;

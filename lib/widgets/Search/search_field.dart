@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project1/utilities.dart';
-import 'package:project1/widgets/Search/Search_results.dart';
 
 class SearchField extends StatelessWidget {
   SearchField({super.key, required this.searchNotifier});

@@ -4,7 +4,6 @@ import 'package:project1/Database/functions/task/get_all_task.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task.dart';
 
-import '../../Database/functions/task/task_data_collector.dart';
 
 List datelists = [];
 
@@ -52,15 +51,12 @@ class AllTasks extends StatelessWidget {
   }
 
   bool dateInfo(String date) {
-    print(datelists);
     for (int i = 0; i <= datelists.length - 1; i++) {
       if (date == datelists[i]) {
-        print('false');
         return false;
       }
     }
     datelists.add(date);
-    print(true);
     return true;
   }
 }

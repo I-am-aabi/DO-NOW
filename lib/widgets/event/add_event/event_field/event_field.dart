@@ -13,7 +13,7 @@ final _evendate = TextEditingController();
 final _eventtime = TextEditingController();
 
 class EventField extends StatelessWidget {
-  EventField({super.key});
+  const EventField({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -67,9 +67,7 @@ class EventField extends StatelessWidget {
   }
 
   onAddevent() {
-    print('onaddcalled');
     eventelements[0] = _eventdescription.text;
-    print(eventelements[0]);
     eventelements[1] = _eventlocation.text.trim();
   }
 }

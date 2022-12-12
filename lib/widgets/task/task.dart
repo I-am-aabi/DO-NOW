@@ -3,10 +3,9 @@ import 'package:project1/functions/navigations/ontap_viewtask.dart';
 import 'package:project1/functions/others/iconfind.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_dates.dart';
-import '../../Database/functions/task/task_data_collector.dart';
 
 class Task extends StatelessWidget {
-  Task(
+  const Task(
       {super.key,
       required this.discription,
       required this.date,

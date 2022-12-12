@@ -36,7 +36,7 @@ class AddEventTopbar extends StatelessWidget {
           height: 25,
           child: IconButton(
             onPressed: () {
-              EventField().onAddevent();
+              const EventField().onAddevent();
               eventAdder(context);
             },
             icon: const Icon(Icons.done_outline),

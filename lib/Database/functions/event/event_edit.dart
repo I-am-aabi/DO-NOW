@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:project1/Database/Models/event_model/event_data_model.dart';
@@ -22,5 +21,5 @@ onEditEvent(context, index) async {
   eventDB.putAt(index, event);
   getAllEvent();
   Navigator.pushReplacement(
-      context, MaterialPageRoute(builder: ((ctx1) => naviBar())));
+      context, MaterialPageRoute(builder: ((ctx1) => const naviBar())));
 }

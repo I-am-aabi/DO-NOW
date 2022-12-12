@@ -14,13 +14,13 @@ class AddEvent extends StatelessWidget {
         body: Padding(
           padding:  const EdgeInsets.only(left: 30,right: 30,top: 20),
           child: Column(
-            children:  [
-              const AddEventTopbar(),
-              const SizedBox(
+            children:  const [
+              AddEventTopbar(),
+              SizedBox(
                 height: 30,
               ),
               Expanded(child: EventField()),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
             ],

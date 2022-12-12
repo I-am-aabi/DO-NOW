@@ -14,9 +14,9 @@ class AddTaskScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: Column(
-          children: [
-            const AddTaskTopbar(),
-            const SizedBox(
+          children: const [
+            AddTaskTopbar(),
+            SizedBox(
               height: 30,
             ),
             Expanded(child: TaskField()),

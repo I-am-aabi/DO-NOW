@@ -9,7 +9,6 @@ class MyFilterChip extends StatefulWidget {
       required this.notifier,
       required this.index});
 
-  @override
   final String label;
   final int index;
   final ValueNotifier notifier;
@@ -18,6 +17,7 @@ class MyFilterChip extends StatefulWidget {
 }
 
 class _MyFilterChipState extends State<MyFilterChip> {
+  @override
   Widget build(BuildContext context) { 
     return Expanded(
       child: FilterChip(

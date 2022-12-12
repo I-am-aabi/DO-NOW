@@ -8,7 +8,9 @@ import 'package:project1/utilities.dart';
 import 'package:project1/widgets/task/task_view/task_field_info.dart';
 
 class ViewEventInfo extends StatelessWidget {
+  // ignore: non_constant_identifier_names
   const ViewEventInfo({super.key, required this.Event});
+  // ignore: non_constant_identifier_names
   final eventModel? Event;
   @override
   Widget build(BuildContext context) {
