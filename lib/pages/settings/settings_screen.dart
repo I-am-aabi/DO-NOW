@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:project1/utilities.dart';
 import 'package:project1/widgets/settings/privacy_policy.dart';
 import 'package:project1/widgets/settings/settings_topbar.dart';
@@ -15,7 +13,6 @@ class SettingsScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: background,
         body: Column(
-            // ignore: prefer_const_constructors
             children: const [
               SettingsTopBar(),
               SizedBox(height: 5,),
