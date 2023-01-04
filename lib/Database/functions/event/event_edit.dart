@@ -3,8 +3,8 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:project1/Database/Models/event_model/event_data_model.dart';
 import 'package:project1/Database/functions/event/get_all_event.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
-import 'package:project1/widgets/event/edit_event/edit_event_fields/edit_event_field.dart';
-import 'package:project1/widgets/other/navigationbar.dart';
+import 'package:project1/presentation/event/edit%20event/widgets/edit_event_field.dart';
+import 'package:project1/presentation/widgets/navigationbar.dart';
 
 onEditEvent(context, index) async {
   const EditEventField().onEditevent();

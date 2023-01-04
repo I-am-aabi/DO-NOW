@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/event/event_selector.dart';
-import 'package:project1/pages/EVENT/view_event.dart';
+import 'package:project1/presentation/event/view%20event/view_event.dart';
 
 void tapViewEvent(context, index) async{
   // ignore: non_constant_identifier_names

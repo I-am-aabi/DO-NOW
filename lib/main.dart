@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:project1/Database/Models/date_model/date_data_mode.dart';
 import 'package:project1/Database/Models/event_model/event_data_model.dart';
-import 'package:project1/widgets/other/navigationbar.dart';
+import 'package:project1/presentation/widgets/navigationbar.dart';
 import 'Database/Models/task_model/task_data_model.dart';
 
 Future<void> main() async {

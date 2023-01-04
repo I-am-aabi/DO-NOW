@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/Database/functions/task/task_selector.dart';
 import 'package:project1/functions/others/get_index.dart';
-import 'package:project1/pages/TASKS/view_task.dart';
+import 'package:project1/presentation/Task/view%20task/view_task.dart';
 
 void tapviewTask(context, id) async {
   final task = await getTask(id);

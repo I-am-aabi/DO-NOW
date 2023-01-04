@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:project1/pages/TASKS/add_task.dart';
+import 'package:project1/presentation/Task/add%20task/add_task.dart';
 
 void tapAddTask(context) {
   Timer((Duration(milliseconds: 500)), () {
