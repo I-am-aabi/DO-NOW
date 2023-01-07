@@ -35,20 +35,6 @@ class _naviBarState extends State<naviBar> {
               _selectedIndex = index;
             });
           }),
-      // bottomNavigationBar: BottomNavigationBar(
-
-      //   backgroundColor: background,
-      //   unselectedItemColor: Color.fromARGB(255, 73, 86, 95),
-
-      //   items: const [
-      //     BottomNavigationBarItem(icon: Icon(Icons.task),label: 'task'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.home),label: 'home'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.event),label: 'event')
-      //   ],
-      //   currentIndex: _selectedIndex, //New
-      //   onTap: _onItemTapped,
-
-      // ),
       body: pagelist.elementAt(_selectedIndex),
     );
   }

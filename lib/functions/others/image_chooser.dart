@@ -1,12 +1,13 @@
 import 'dart:io';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
 Image chooseImage(flag, path) {
   if (flag == false) {
-    return Image.asset(path);
+    print('asset return');
+    return Image.asset('assets/images/dummy.jpg');
   } else {
+    print('file return');
     return Image.file(File(path));
   }
 }

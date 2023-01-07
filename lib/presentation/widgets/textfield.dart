@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/presentation/widgets/utilities.dart';
 
-class MyTextField extends StatefulWidget {
+class MyTextField extends StatelessWidget {
   const MyTextField({
     super.key,
     required this.hint,
@@ -15,24 +15,19 @@ class MyTextField extends StatefulWidget {
   final TextEditingController fieldcontroller;
 
   final IconData? fieldiconData;
-  @override
-  State<MyTextField> createState() => _MyTextFieldState();
-}
-
-class _MyTextFieldState extends State<MyTextField> {
   // allelements new allelements()
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       // initialValue: widget.initial,
-      controller: widget.fieldcontroller,
+      controller: fieldcontroller,
       style: TextStyle(color: textcolor),
       decoration: InputDecoration(
         prefixIcon: Icon(
-          widget.fieldiconData,
+          fieldiconData,
           color: selection,
         ),
-        hintText: widget.hint,
+        hintText: hint,
         hintStyle: TextStyle(color: topbar),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
