@@ -7,10 +7,10 @@ Future<String> pickImage() async {
     maxHeight: 1800,
   );
   if (pickedimage == null) {
-    print('return zero');
+    
     return 'error';
   } else {
-    print(pickedimage.path);
+    
     return pickedimage.path;
   }
 }
