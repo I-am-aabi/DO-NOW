@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addtasks.dart';
 import 'package:project1/functions/navigations/ontap_search.dart';
+import 'package:project1/functions/navigations/ontap_settings.dart';
 import 'package:project1/presentation/settings/settings_screen.dart';
 import 'package:project1/presentation/widgets/utilities.dart';
 
@@ -52,10 +53,7 @@ class TaskTopBar extends StatelessWidget {
               height: 25,
               child: IconButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: ((context) => const SettingsScreen())));
+                  tapSettings(context);
                 },
                 padding: const EdgeInsets.all(0),
                 icon: const Icon(Icons.settings),

@@ -7,7 +7,7 @@ import 'package:project1/presentation/event/add%20event/widgets/event_categories
 import 'package:project1/presentation/event/add%20event/widgets/event_image.dart';
 import 'package:project1/presentation/widgets/date_field.dart';
 import 'package:project1/presentation/widgets/textfield.dart';
-import 'package:project1/presentation/Task/edit%20task/widgets/status_categories.dart';
+import 'package:project1/presentation/widgets/status_categories.dart';
 
 final _discriptioneditcontroller = TextEditingController();
 final _locationeditcontroller = TextEditingController();

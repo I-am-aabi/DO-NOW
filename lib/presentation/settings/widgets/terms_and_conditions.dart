@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:project1/presentation/widgets/utilities.dart';
 import 'package:project1/presentation/settings/widgets/terms_and_condition_dialogue.dart';
 

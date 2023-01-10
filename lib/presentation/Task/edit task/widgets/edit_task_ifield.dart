@@ -7,7 +7,7 @@ import 'package:project1/presentation/widgets/date_field.dart';
 import 'package:project1/presentation/widgets/textfield.dart';
 
 import 'package:project1/presentation/Task/add%20task/widgets/categories_task.dart';
-import 'package:project1/presentation/Task/edit%20task/widgets/status_categories.dart';
+import 'package:project1/presentation/widgets/status_categories.dart';
 
 final _discriptioneditcontroller = TextEditingController();
 final _locationeditcontroller = TextEditingController();
@@ -68,7 +68,7 @@ class EditTaskField extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            CategoriesTask(intial: task!.category),
+            CategoriesTask(initial: task!.category),
             const SizedBox(
               height: 10,
             ),

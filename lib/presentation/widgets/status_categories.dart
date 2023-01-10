@@ -1,14 +1,15 @@
-// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:project1/Database/functions/task/task_data_collector.dart';
 import 'package:project1/presentation/widgets/utilities.dart';
-import 'package:project1/providers/task_providers.dart';
+import 'package:project1/providers/common_providers.dart';
 
-class CategoriesTask extends StatelessWidget {
-  CategoriesTask({super.key,  this.initial});
-  var initial;
+// ignore: must_be_immutable
+class CategoriesStatus extends StatelessWidget {
+  CategoriesStatus({super.key, required this.initail});
+  // ignore: prefer_typing_uninitialized_variables
+  var initail;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,33 +20,31 @@ class CategoriesTask extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 8.0),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('category:'),
-            const SizedBox(
-              width: 5,
+            Text(
+              'Status:',
+              style: TextStyle(fontFamily: 'suii', color: textcolor),
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 130.0, right: 8),
+                padding: const EdgeInsets.only(left: 140.0, right: 8),
                 child: DropdownButtonHideUnderline(
                   child: Consumer(
                     builder: (context, ref, child) {
-                      final taskCategory = ref.watch(taskCategoryprovider);
+                      final status = ref.watch(statusProvider);
                       return DropdownButton(
                         dropdownColor: background,
-                        // ignore: unnecessary_null_comparison
-                        hint: taskCategory == ''
-                            ?  Text(initial)
+                        hint: status == ''
+                            ? Text(initail)
                             : Text(
-                                taskCategory,
+                                status,
                                 style: TextStyle(color: textcolor),
                               ),
                         isExpanded: true,
                         iconSize: 30.0,
                         style: TextStyle(
-                            color: selection, fontFamily: 'suii', fontSize: 15),
-                        items: ['work', 'personal', 'shopping'].map(
+                            color: textcolor, fontFamily: 'suii', fontSize: 17),
+                        items: ['upcoming', 'completed', 'pending'].map(
                           (val) {
                             return DropdownMenuItem<String>(
                               value: val,
@@ -54,9 +53,9 @@ class CategoriesTask extends StatelessWidget {
                           },
                         ).toList(),
                         onChanged: (val) {
-                          ref.read(taskCategoryprovider.notifier).state = val!;
-                          elements[4] = val;
-                          initial = val;
+                          ref.read(statusProvider.notifier).state = val!;
+                          elements[6] = val;
+                          initail = val;
                         },
                       );
                     },

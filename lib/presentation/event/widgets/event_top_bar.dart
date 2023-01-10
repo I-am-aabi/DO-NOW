@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:project1/functions/navigations/ontap_addevent.dart';
 import 'package:project1/functions/navigations/ontap_search.dart';
-
+import 'package:project1/functions/navigations/ontap_settings.dart';
 import 'package:project1/presentation/widgets/utilities.dart';
 
 class EventTopBar extends StatelessWidget {
@@ -14,7 +13,6 @@ class EventTopBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-       
         Text(
           'events',
           style: TextStyle(
@@ -25,23 +23,23 @@ class EventTopBar extends StatelessWidget {
         ),
         Row(
           children: [
-             SizedBox(
-          height: 25,
-          child: IconButton(
-            padding: const EdgeInsets.all(0),
-            onPressed: () {
-              tapAddEvent(context);
-            },
-            icon: const Icon(Icons.add),
-            iconSize: 22,
-            color: selection,
-          ),
-        ),
+            SizedBox(
+              height: 25,
+              child: IconButton(
+                padding: const EdgeInsets.all(0),
+                onPressed: () {
+                  tapAddEvent(context);
+                },
+                icon: const Icon(Icons.add),
+                iconSize: 22,
+                color: selection,
+              ),
+            ),
             SizedBox(
               height: 25,
               child: IconButton(
                 onPressed: () {
-                   tapSearch(context);
+                  tapSearch(context);
                 },
                 padding: const EdgeInsets.all(0),
                 icon: const Icon(Icons.search),
@@ -49,11 +47,11 @@ class EventTopBar extends StatelessWidget {
                 color: selection,
               ),
             ),
-              SizedBox(
+            SizedBox(
               height: 25,
               child: IconButton(
                 onPressed: () {
-                   tapSearch(context);
+                  tapSettings(context);
                 },
                 padding: const EdgeInsets.all(0),
                 icon: const Icon(Icons.settings),

@@ -64,7 +64,7 @@ class TaskField extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            CategoriesTask(intial: 'Category'),
+            CategoriesTask(initial: 'Category'),
             const SizedBox(
               height: 10,
             ),
